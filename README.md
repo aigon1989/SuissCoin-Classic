@@ -18,7 +18,7 @@ Swisscoin-Classic (SCC) is a decentralised open source digital currency.
  - 200 confirmations for minted coins
  - very low transaction fees (most transactions are free)
  - no destruction of transaction fees (all collected by a block finder)
- - the default P2P port is 30913, RPC port is 30915
+ - the default P2P port is 30915, RPC port is 30914
  - I2P/Tor ready
 
 
