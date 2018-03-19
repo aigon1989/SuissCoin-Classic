@@ -4,7 +4,7 @@ Swisscoin-Classic
 Swisscoin-Classic (SCC) is a decentralised open source digital currency.
 
  - advanced hybrid proof-of-work (PoW) and proof-of-stake (PoS)
- - 400 million coins to be produced
+ - 5 bilion coins to be produced
  - block hashing is BLAKE2s
  - PoW hashing is NeoScrypt
  - PoS hashing is SHA-256d
