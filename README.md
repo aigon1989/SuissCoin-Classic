@@ -41,6 +41,7 @@ http://5.135.66.120:3001
 Solo Mining
 -----------
 Define a "swisscoin-classic.conf" file into data folder (~/.swisscoin-classic on Linux, C:\Users\<your_user_name>\AppData\Roaming\swisscoin-classic on Windows) with the following values:
+
 server=1
 rpcport=30914
 rpcuser=user
@@ -49,7 +50,9 @@ rpcpassword=password
 Then, download and compile cgminer (for gpu mining) or cpuminer (for cpu mining) and run:
 
 ./cgminer -a neoscrypt -o 127.0.0.1:30914 -u user -p password
+
 or
+
 ./cpuminer -a neoscrypt -o 127.0.0.1:30914 -u user -p password
 
 
