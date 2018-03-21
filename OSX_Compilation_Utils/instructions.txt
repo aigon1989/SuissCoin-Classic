@@ -1,0 +1,26 @@
+a.gonzalez - Compiling the wallet for Mac OSX Sierra: My fight, my proudness.  21-03-2018
+
+1.- Look at Makefile in this file to know which dependencies you have to download using 
+	brew install <package>
+
+	miniupnpc
+	berkley-db
+	openssl
+	qt
+	db8
+	qrencode
+
+2.- Compile boost_1.55.0 using:
+	./bootstrap.sh --prefix=/usr/local/boost-1.55.0
+	sudo ./b2 cxxflags=-std=c++14 install
+
+Make sure you use this version of boost, some files where modified to make them compilable by clang applying two patches as read here:
+	https://github.com/boostorg/atomic/commit/e4bde20f2eec0a51be14533871d2123bd2ab9cf3
+	https://github.com/boostorg/atomic/commit/6bb71fdd8f7cc346d90fb14beb38b7297fc1ffd9
+
+3.- run qmake
+4.- Replace Makefile on project root with Makefile on this folder
+5.- Modify imports at INCPATH and LIBS in order to make it fit to your system and the libraries you have downloaded (special look at -L(lib) and -I(include) flags
+6.- Run make clean if it's not your first attempt to compile (as it happened to me, that I needed countless trials and errors to compile this and make this guide).
+7.- Run make
+8.- ¡Et voilá!
