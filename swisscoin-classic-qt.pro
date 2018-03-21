@@ -8,7 +8,7 @@ CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += static
 QMAKE_CFLAGS += -DASM -DOPT
-
+mac: QT += macextras
 greaterThan(QT_MAJOR_VERSION, 4): {
     QT += widgets
     message("Building with the Qt v5 support$$escape_expand(\\n)")

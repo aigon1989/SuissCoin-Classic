@@ -1,4 +1,5 @@
 #define BOOST_TEST_MODULE Orbitcoin Test Suite
+#define BOOST_NO_SCOPED_ENUMS
 #include <boost/test/unit_test.hpp>
 #include <boost/filesystem.hpp>
 

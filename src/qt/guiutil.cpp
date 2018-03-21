@@ -1,3 +1,4 @@
+#define BOOST_NO_SCOPED_ENUMS
 #include "guiutil.h"
 #include "bitcoinaddressvalidator.h"
 #include "walletmodel.h"

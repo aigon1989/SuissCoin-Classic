@@ -3,7 +3,7 @@
 
 #include <QMenu>
 #include <QWidget>
-
+#include <QtMacExtras>
 extern void qt_mac_set_dock_menu(QMenu*);
 
 #undef slots
@@ -76,7 +76,9 @@ void MacDockIconHandler::setIcon(const QIcon &icon) {
     else {
         QSize size = icon.actualSize(QSize(128, 128));
         QPixmap pixmap = icon.pixmap(size);
-        CGImageRef cgImage = pixmap.toMacCGImageRef();
+        //a.gonzalez - adaptamos codigo a qt5
+       	//CGImageRef cgImage = pixmap.toMacCGImageRef();
+        CGImageRef cgImage = QtMac::toCGImageRef(pixmap);	
         /* Not using initWithCGImage as it is for 10.6+ */
         /* image = [[NSImage alloc] initWithCGImage:cgImage size:NSZeroSize]; */
         NSRect imageRect = NSMakeRect(0.0, 0.0, 0.0, 0.0);
