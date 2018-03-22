@@ -26,7 +26,7 @@ Make sure you use this version of boost, some files where modified to make them 
 
 8.- Make the .dmg file!
 
-	export QTDIR=/usr/local/Cellar/qt
+	export QTDIR=/usr/local/Cellar/qt/<your_version_of_qt>
 	T=$(contrib/qt_translations.py $QTDIR/translations src/qt/locale)
 
 	-In case macreleaseplus can't find your boost libraries:
