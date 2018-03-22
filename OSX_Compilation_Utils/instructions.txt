@@ -22,5 +22,20 @@ Make sure you use this version of boost, some files where modified to make them 
 4.- Replace Makefile on project root with Makefile on this folder
 5.- Modify imports at INCPATH and LIBS in order to make it fit to your system and the libraries you have downloaded (special look at -L(lib) and -I(include) flags
 6.- Run make clean if it's not your first attempt to compile (as it happened to me, that I needed countless trials and errors to compile this and make this guide).
-7.- Run make
+7.- Run make, that will compile the Qt Binaries, but now, you will face the last challenge...
+
+8.- Make the .dmg file!
+
+	export QTDIR=/usr/local/Cellar/qt
+	T=$(contrib/qt_translations.py $QTDIR/translations src/qt/locale)
+
+	-In case macreleaseplus can't find your boost libraries:
+	  	cp /usr/local/boost-1.55.0/lib/libboost_program_options.dylib .
+	    	cp /usr/local/boost-1.55.0/lib/libboost_system.dylib .
+  		cp /usr/local/boost-1.55.0/lib/libboost_thread.dylib .
+		cp /usr/local/boost-1.55.0/lib/libboost_filesystem.dylib .
+		cp /usr/local/boost-1.55.0/lib/libboost_atomic.dylib .
+
+	python2.7 contrib/macdeploy/macdeployqtplus  -add-qt-tr $T -dmg -fancy contrib/macdeploy/fancy.plist Swisscoin-Classic-Qt.app
+
 8.- ¡Et voilá!

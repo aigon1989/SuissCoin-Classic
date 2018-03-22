@@ -556,7 +556,7 @@ shutil.copytree(app_bundle, target)
 applicationBundle = ApplicationBundleInfo(target)
 
 # ------------------------------------------------
-
+ret = 0
 if verbose >= 2:
     print "+ Deploying frameworks +"
 
