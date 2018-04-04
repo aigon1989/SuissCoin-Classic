@@ -176,7 +176,7 @@ BOOST_SPIRIT_CLASSIC_NAMESPACE_BEGIN
     //          expect_end(str_p("end"))
     //
     //      Take note that although the example uses enums to hold the
-    //      information regarding the error (error desccriptor), we are free
+    //      information regarding the error (error desiccriptor), we are free
     //      to use other types such as integers and strings. Enums are
     //      convenient for error handlers to easily catch since C++ treats
     //      enums as unique types.

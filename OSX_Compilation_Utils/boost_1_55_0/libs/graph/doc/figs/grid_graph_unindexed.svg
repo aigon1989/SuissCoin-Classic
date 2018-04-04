@@ -178,9 +178,9 @@
              style="fill:#00ccff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
              d="M 63.63961,33.466965 C 63.63961,25.242303 56.059425,18.567215 46.719555,18.567215 C 37.379684,18.567215 29.7995,25.242303 29.7995,33.466965 L 63.63961,33.466965 z"
              id="path3158"
-             sodipodi:nodetypes="cscc" />
+             sodipodi:nodetypes="csicc" />
           <path
-             sodipodi:nodetypes="cscc"
+             sodipodi:nodetypes="csicc"
              id="path2385"
              d="M 63.63961,32.567215 C 63.63961,40.791877 56.059425,47.466965 46.719555,47.466965 C 37.379684,47.466965 29.7995,40.791877 29.7995,32.567215 L 63.63961,32.567215 z"
              style="fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />

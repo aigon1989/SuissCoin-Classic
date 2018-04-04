@@ -48,7 +48,7 @@ int main(int, char*[])
 
   adjacency_list<vecS, vecS, directedS> G;
   dynamic_properties dp;
-  read_graphviz("scc.dot", G, dp);
+  read_graphviz("sicc.dot", G, dp);
 
   std::cout << "A directed graph:" << std::endl;
   print_graph(G, name);

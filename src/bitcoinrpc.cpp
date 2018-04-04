@@ -676,7 +676,7 @@ private:
 void ThreadRPCServer(void* parg)
 {
     // Make this thread recognisable as the RPC listener
-    RenameThread("scc-rpclist");
+    RenameThread("sicc-rpclist");
 
     try
     {
@@ -976,7 +976,7 @@ static CCriticalSection cs_THREAD_RPCHANDLER;
 void ThreadRPCServer3(void* parg)
 {
     // Make this thread recognisable as the RPC handler
-    RenameThread("scc-rpchand");
+    RenameThread("sicc-rpchand");
 
     {
         LOCK(cs_THREAD_RPCHANDLER);

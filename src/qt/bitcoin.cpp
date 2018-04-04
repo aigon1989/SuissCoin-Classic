@@ -101,7 +101,7 @@ static void QueueShutdown()
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("scc-core", psz).toStdString();
+    return QCoreApplication::translate("sicc-core", psz).toStdString();
 }
 
 /* Handle runaway exceptions. Shows a message box with the problem and quits the program.

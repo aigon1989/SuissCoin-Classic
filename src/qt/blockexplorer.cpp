@@ -154,7 +154,7 @@ void BlockExplorer::updateExplorer(bool block) {
         bytes_reverse((uchar *) &data[0], (uchar *) &hash, 32);
         ui->baseData->setText(QString::fromUtf8(QByteArray((char *) &data[0], 32).toHex()));
 
-        ui->coinSupplyData->setText(QString::number((double)pindex->nMoneySupply / (double)COIN, 'f', 6) + " SCC");
+        ui->coinSupplyData->setText(QString::number((double)pindex->nMoneySupply / (double)COIN, 'f', 6) + " SICC");
 
         /* List of payments */
         std::string strTx = "";
@@ -174,7 +174,7 @@ void BlockExplorer::updateExplorer(bool block) {
                 strTx.append(CBitcoinAddress(address).ToString());
                 strTx.append("  ");
                 strTx.append(boost::to_string((double)txout.nValue / (double)COIN));
-                strTx.append(" SCC\n");
+                strTx.append(" SICC\n");
             }
             strTx.append("\n");
         }
@@ -238,7 +238,7 @@ void BlockExplorer::updateExplorer(bool block) {
             strIn.append(CBitcoinAddress(address).ToString());
             strIn.append("  ");
             strIn.append(boost::to_string((double)nCurrentValueIn / (double)COIN));
-            strIn.append(" SCC\n\n");
+            strIn.append(" SICC\n\n");
         }
         if(!strIn.size()) strIn.append("N/A");
         ui->inputData->setText(QString::fromUtf8(strIn.c_str()));
@@ -259,11 +259,11 @@ void BlockExplorer::updateExplorer(bool block) {
             strOut.append(CBitcoinAddress(address).ToString());
             strOut.append("  ");
             strOut.append(boost::to_string((double)nCurrentValueOut / (double)COIN));
-            strOut.append(" SCC\n");
+            strOut.append(" SICC\n");
         }
         ui->outputData->setText(QString::fromUtf8(strOut.c_str()));
 
-        ui->valueData->setText(QString::number((double)nValueOut / (double)COIN, 'f', 6) + " SCC");
+        ui->valueData->setText(QString::number((double)nValueOut / (double)COIN, 'f', 6) + " SICC");
 
         if(tx.IsCoinBase() || tx.IsCoinStake()) {
 
@@ -283,13 +283,13 @@ void BlockExplorer::updateExplorer(bool block) {
             }
             nFees = nValueOut - nValueIn - nSubsidy;
             ui->feeText->setText(QString(tr("Reward + fees:")));
-            ui->feeData->setText(QString("%1 + %2 SCC") \
+            ui->feeData->setText(QString("%1 + %2 SICC") \
               .arg(QString::number((double)nSubsidy / (double)COIN, 'f', 6)) \
               .arg(QString::number((double)nFees / (double)COIN, 'f', 6)));
         } else {
             nFees = nValueIn - nValueOut;
             ui->feeText->setText(QString(tr("Fee paid:")));
-            ui->feeData->setText(QString::number((double)nFees / (double)COIN, 'f', 6) + " SCC");
+            ui->feeData->setText(QString::number((double)nFees / (double)COIN, 'f', 6) + " SICC");
         }
 
     }

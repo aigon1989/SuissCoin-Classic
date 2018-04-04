@@ -287,10 +287,10 @@ int make1( LIST * targets )
 static void make1a( state * const pState )
 {
     TARGET * t = pState->t;
-    TARGET * const scc_root = target_scc( t );
+    TARGET * const sicc_root = target_sicc( t );
 
-    if ( !pState->parent || target_scc( pState->parent ) != scc_root )
-        pState->t = t = scc_root;
+    if ( !pState->parent || target_sicc( pState->parent ) != sicc_root )
+        pState->t = t = sicc_root;
 
     /* If the parent is the first to try to build this target or this target is
      * in the MAKE1C quagmire, arrange for the parent to be notified when this
@@ -298,11 +298,11 @@ static void make1a( state * const pState )
      */
     if ( pState->parent && t->progress <= T_MAKE_RUNNING )
     {
-        TARGET * const parent_scc = target_scc( pState->parent );
-        if ( t != parent_scc )
+        TARGET * const parent_sicc = target_sicc( pState->parent );
+        if ( t != parent_sicc )
         {
-            t->parents = targetentry( t->parents, parent_scc );
-            ++parent_scc->asynccnt;
+            t->parents = targetentry( t->parents, parent_sicc );
+            ++parent_sicc->asynccnt;
         }
     }
 
@@ -657,17 +657,17 @@ static void make1c( state const * const pState )
                     push_state( &temp_stack, additional_includes, c->target,
                         T_STATE_MAKE1A );
 
-            if ( t->scc_root )
+            if ( t->sicc_root )
             {
-                TARGET * const scc_root = target_scc( t );
-                assert( scc_root->progress < T_MAKE_DONE );
+                TARGET * const sicc_root = target_sicc( t );
+                assert( sicc_root->progress < T_MAKE_DONE );
                 for ( c = t->parents; c; c = c->next )
                 {
-                    if ( target_scc( c->target ) == scc_root )
+                    if ( target_sicc( c->target ) == sicc_root )
                         push_state( &temp_stack, c->target, NULL, T_STATE_MAKE1B
                             );
                     else
-                        scc_root->parents = targetentry( scc_root->parents,
+                        sicc_root->parents = targetentry( sicc_root->parents,
                             c->target );
                 }
             }

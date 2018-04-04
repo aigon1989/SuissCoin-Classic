@@ -25,7 +25,7 @@ function computes the strongly connects components of a directed graph
 using Tarjan's DFS-based
 algorithm~\cite{tarjan72:dfs_and_linear_algo}.
 
-A \keyword{strongly connected component} (SCC) of a directed graph
+A \keyword{strongly connected component} (SICC) of a directed graph
 $G=(V,E)$ is a maximal set of vertices $U$ which is in $V$ such that
 for every pair of vertices $u$ and $v$ in $U$, we have both a path
 from $u$ to $v$ and path from $v$ to $u$. That is to say that $u$ and
@@ -35,10 +35,10 @@ cross edge (u,v) is an edge from one subtree to another subtree
  -> discover_time[u] > discover_time[v]
 
 Lemma 10.  Let $v$ and $w$ be vertices in $G$ which are in the same
-SCC and let $F$ be any depth-first forest of $G$. Then $v$ and $w$
+SICC and let $F$ be any depth-first forest of $G$. Then $v$ and $w$
 have a common ancestor in $F$. Also, if $u$ is the common ancestor of
 $u$ and $v$ with the latest discover time then $w$ is also in the same
-SCC as $u$ and $v$.
+SICC as $u$ and $v$.
 
 Proof. 
 
@@ -74,11 +74,11 @@ following cases:
 \begin{enumerate}
 \item If $d[a] < d[u]$ then we know that $a$ is really an ancestor of
   $u$ in the DFS tree and therefore we have a cycle and $u$ must be in
-  a SCC with $a$. We then set $root[u] = a$ and continue our way back up
+  a SICC with $a$. We then set $root[u] = a$ and continue our way back up
   the DFS.
   
 \item If $a = u$ then we know that $u$ must be the topmost vertex of a
-  subtree that defines a SCC.  All of the vertices in this subtree are
+  subtree that defines a SICC.  All of the vertices in this subtree are
   further down on the stack than vertex $u$ so we pop the vertices off
   of the stack until we reach $u$ and mark each one as being in the
   same component.
@@ -96,11 +96,11 @@ following cases:
 template <typename Graph, typename ComponentMap, typename ComponentLists>
 void build_component_lists
   (const Graph& g,
-   typename graph_traits<Graph>::vertices_size_type num_scc,
+   typename graph_traits<Graph>::vertices_size_type num_sicc,
    ComponentMap component_number,
    ComponentLists& components)
 {
-  components.resize(num_scc);
+  components.resize(num_sicc);
   typename graph_traits<Graph>::vertex_iterator vi, vi_end;
   for (tie(vi, vi_end) = vertices(g); vi != vi_end; ++vi)
     components[component_number[*vi]].push_back(*vi);

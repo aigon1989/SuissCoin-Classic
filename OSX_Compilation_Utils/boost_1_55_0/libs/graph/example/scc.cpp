@@ -17,7 +17,7 @@ main()
 {
   using namespace boost;
   GraphvizDigraph g;
-  read_graphviz("figs/scc.dot", g);
+  read_graphviz("figs/sicc.dot", g);
 
   typedef graph_traits < GraphvizDigraph >::vertex_descriptor vertex_t;
   std::map < vertex_t, int >component;
@@ -35,7 +35,7 @@ main()
     if (vertex_attr_map[*vi]["color"] == "black")
       vertex_attr_map[*vi]["fontcolor"] = "white";
   }
-  write_graphviz("figs/scc-out.dot", g);
+  write_graphviz("figs/sicc-out.dot", g);
 
   return EXIT_SUCCESS;
 }

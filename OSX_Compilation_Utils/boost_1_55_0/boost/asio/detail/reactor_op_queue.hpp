@@ -182,7 +182,7 @@ private:
     operations(const operations&) {}
     void operator=(const operations&) {}
 
-    // The operations waiting on the desccriptor.
+    // The operations waiting on the desiccriptor.
     op_queue<reactor_op> op_queue_;
   };
 

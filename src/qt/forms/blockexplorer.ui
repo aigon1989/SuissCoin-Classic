@@ -207,7 +207,7 @@
        <item row="13" column="1">
         <widget class="QLabel" name="valueData">
          <property name="text">
-          <string>0.00 SCC</string>
+          <string>0.00 SICC</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -237,7 +237,7 @@
        <item row="7" column="1">
         <widget class="QLabel" name="coinSupplyData">
          <property name="text">
-          <string>0.00 SCC</string>
+          <string>0.00 SICC</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -254,7 +254,7 @@
        <item row="14" column="1">
         <widget class="QLabel" name="feeData">
          <property name="text">
-          <string>0.00 SCC</string>
+          <string>0.00 SICC</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>

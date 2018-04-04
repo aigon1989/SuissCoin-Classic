@@ -933,29 +933,29 @@ int main(int argc, char** argv) {
     char junk;
     if (leveldb::Slice(argv[i]).starts_with("--benchmarks=")) {
       FLAGS_benchmarks = argv[i] + strlen("--benchmarks=");
-    } else if (sccanf(argv[i], "--compression_ratio=%lf%c", &d, &junk) == 1) {
+    } else if (siccanf(argv[i], "--compression_ratio=%lf%c", &d, &junk) == 1) {
       FLAGS_compression_ratio = d;
-    } else if (sccanf(argv[i], "--histogram=%d%c", &n, &junk) == 1 &&
+    } else if (siccanf(argv[i], "--histogram=%d%c", &n, &junk) == 1 &&
                (n == 0 || n == 1)) {
       FLAGS_histogram = n;
-    } else if (sccanf(argv[i], "--use_existing_db=%d%c", &n, &junk) == 1 &&
+    } else if (siccanf(argv[i], "--use_existing_db=%d%c", &n, &junk) == 1 &&
                (n == 0 || n == 1)) {
       FLAGS_use_existing_db = n;
-    } else if (sccanf(argv[i], "--num=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--num=%d%c", &n, &junk) == 1) {
       FLAGS_num = n;
-    } else if (sccanf(argv[i], "--reads=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--reads=%d%c", &n, &junk) == 1) {
       FLAGS_reads = n;
-    } else if (sccanf(argv[i], "--threads=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--threads=%d%c", &n, &junk) == 1) {
       FLAGS_threads = n;
-    } else if (sccanf(argv[i], "--value_size=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--value_size=%d%c", &n, &junk) == 1) {
       FLAGS_value_size = n;
-    } else if (sccanf(argv[i], "--write_buffer_size=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--write_buffer_size=%d%c", &n, &junk) == 1) {
       FLAGS_write_buffer_size = n;
-    } else if (sccanf(argv[i], "--cache_size=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--cache_size=%d%c", &n, &junk) == 1) {
       FLAGS_cache_size = n;
-    } else if (sccanf(argv[i], "--bloom_bits=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--bloom_bits=%d%c", &n, &junk) == 1) {
       FLAGS_bloom_bits = n;
-    } else if (sccanf(argv[i], "--open_files=%d%c", &n, &junk) == 1) {
+    } else if (siccanf(argv[i], "--open_files=%d%c", &n, &junk) == 1) {
       FLAGS_open_files = n;
     } else if (strncmp(argv[i], "--db=", 5) == 0) {
       FLAGS_db = argv[i] + 5;

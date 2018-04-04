@@ -177,7 +177,7 @@ class CorruptionTest {
     std::string property;
     int result;
     if (db_->GetProperty(name, &property) &&
-        sccanf(property.c_str(), "%d", &result) == 1) {
+        siccanf(property.c_str(), "%d", &result) == 1) {
       return result;
     } else {
       return -1;

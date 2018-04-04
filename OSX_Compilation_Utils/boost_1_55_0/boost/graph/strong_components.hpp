@@ -32,12 +32,12 @@ namespace boost {
     
     template <typename ComponentMap, typename RootMap, typename DiscoverTime,
               typename Stack>
-    class tarjan_scc_visitor : public dfs_visitor<> 
+    class tarjan_sicc_visitor : public dfs_visitor<> 
     {
       typedef typename property_traits<ComponentMap>::value_type comp_type;
       typedef typename property_traits<DiscoverTime>::value_type time_type;
     public:
-      tarjan_scc_visitor(ComponentMap comp_map, RootMap r, DiscoverTime d, 
+      tarjan_sicc_visitor(ComponentMap comp_map, RootMap r, DiscoverTime d, 
                          comp_type& c_, Stack& s_)
         : c(c_), comp(comp_map), root(r), discover_time(d),
           dfs_time(time_type()), s(s_) { }
@@ -103,7 +103,7 @@ namespace boost {
       typename property_traits<ComponentMap>::value_type total = 0;
 
       std::stack<Vertex> s;
-      detail::tarjan_scc_visitor<ComponentMap, RootMap, DiscoverTime, 
+      detail::tarjan_sicc_visitor<ComponentMap, RootMap, DiscoverTime, 
         std::stack<Vertex> > 
         vis(comp, root, discover_time, total, s);
       depth_first_search(g, params.visitor(vis));
@@ -156,7 +156,7 @@ namespace boost {
     template <class Graph, class ComponentMap, class RootMap,
               class P, class T, class R, class DiscoverTimeMap>
     inline typename property_traits<ComponentMap>::value_type
-    scc_helper2(const Graph& g,
+    sicc_helper2(const Graph& g,
                 ComponentMap comp,
                 RootMap r_map,
                 const bgl_named_params<P, T, R>& params,
@@ -175,7 +175,7 @@ namespace boost {
             const bgl_named_params<P, T, R>& params,
             RootMap r_map)
       {
-        return scc_helper2(g, comp, r_map, params, get_param(params, vertex_discover_time));
+        return sicc_helper2(g, comp, r_map, params, get_param(params, vertex_discover_time));
       }
     };
     template <>
@@ -193,7 +193,7 @@ namespace boost {
         typename std::vector<Vertex>::size_type
           n = num_vertices(g) > 0 ? num_vertices(g) : 1;
         std::vector<Vertex> root_vec(n);
-        return scc_helper2
+        return sicc_helper2
           (g, comp, 
            make_iterator_property_map(root_vec.begin(), choose_const_pmap
                                       (get_param(params, vertex_index),
@@ -206,7 +206,7 @@ namespace boost {
     template <class Graph, class ComponentMap, class RootMap,
               class P, class T, class R>
     inline typename property_traits<ComponentMap>::value_type
-    scc_helper1(const Graph& g,
+    sicc_helper1(const Graph& g,
                ComponentMap comp,
                const bgl_named_params<P, T, R>& params,
                RootMap r_map)
@@ -226,7 +226,7 @@ namespace boost {
   {
     typedef typename graph_traits<Graph>::directed_category DirCat;
     BOOST_STATIC_ASSERT((is_convertible<DirCat*, directed_tag*>::value == true));
-    return detail::scc_helper1(g, comp, params, 
+    return detail::sicc_helper1(g, comp, params, 
                                get_param(params, vertex_root_t()));
   }
 
@@ -244,11 +244,11 @@ namespace boost {
   template <typename Graph, typename ComponentMap, typename ComponentLists>
   void build_component_lists
     (const Graph& g,
-     typename graph_traits<Graph>::vertices_size_type num_scc,
+     typename graph_traits<Graph>::vertices_size_type num_sicc,
      ComponentMap component_number,
      ComponentLists& components)
   {
-    components.resize(num_scc);
+    components.resize(num_sicc);
     typename graph_traits<Graph>::vertex_iterator vi, vi_end;
     for (boost::tie(vi, vi_end) = vertices(g); vi != vi_end; ++vi)
       components[component_number[*vi]].push_back(*vi);

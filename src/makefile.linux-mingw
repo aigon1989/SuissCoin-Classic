@@ -103,7 +103,7 @@ LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
 DEFS += -I"$(CURDIR)/leveldb/include"
 DEFS += -I"$(CURDIR)/leveldb/helpers"
 leveldb/libleveldb.a:
-	@echo "Building LevelDB ..." && cd leveldb && CC=$(CC) CXX=$(CXX) TARGET_OS=OS_WINDOWS_CROSCCOMPILE CXXFLAGS="-I$(INCLUDEPATHS)" LDFLAGS="-L$(LIBPATHS)" $(MAKE) libleveldb.a libmemenv.a && $(RANLIB) libleveldb.a && $(RANLIB) libmemenv.a && cd ..
+	@echo "Building LevelDB ..." && cd leveldb && CC=$(CC) CXX=$(CXX) TARGET_OS=OS_WINDOWS_CROSICCOMPILE CXXFLAGS="-I$(INCLUDEPATHS)" LDFLAGS="-L$(LIBPATHS)" $(MAKE) libleveldb.a libmemenv.a && $(RANLIB) libleveldb.a && $(RANLIB) libmemenv.a && cd ..
 obj/txdb-leveldb.o: leveldb/libleveldb.a
 
 obj/build.h: FORCE
@@ -128,6 +128,6 @@ clean:
 	-rm -f obj/*.o
 	-rm -f swisscoin-classicd.exe
 	-rm -f obj/build.h
-	cd leveldb && TARGET_OS=OS_WINDOWS_CROSCCOMPILE $(MAKE) clean && cd ..
+	cd leveldb && TARGET_OS=OS_WINDOWS_CROSICCOMPILE $(MAKE) clean && cd ..
 
 FORCE:

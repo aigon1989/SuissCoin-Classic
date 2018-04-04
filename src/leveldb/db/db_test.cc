@@ -1409,7 +1409,7 @@ TEST(DBTest, CustomComparator) {
           << EscapeString(x);
       int val;
       char ignored;
-      ASSERT_TRUE(sccanf(x.ToString().c_str(), "[%i]%c", &val, &ignored) == 1)
+      ASSERT_TRUE(siccanf(x.ToString().c_str(), "[%i]%c", &val, &ignored) == 1)
           << EscapeString(x);
       return val;
     }
@@ -1776,7 +1776,7 @@ static void MTThreadBody(void* arg) {
         // Check that the writer thread counter is >= the counter in the value
         ASSERT_OK(s);
         int k, w, c;
-        ASSERT_EQ(3, sccanf(value.c_str(), "%d.%d.%d", &k, &w, &c)) << value;
+        ASSERT_EQ(3, siccanf(value.c_str(), "%d.%d.%d", &k, &w, &c)) << value;
         ASSERT_EQ(k, key);
         ASSERT_GE(w, 0);
         ASSERT_LT(w, kNumThreads);

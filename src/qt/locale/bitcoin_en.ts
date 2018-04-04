@@ -884,8 +884,8 @@ Address: %4
         <location line="+80"/>
         <location line="+86"/>
         <location line="+38"/>
-        <source>0.00 SCC</source>
-        <translation>0.00 SCC</translation>
+        <source>0.00 SICC</source>
+        <translation>0.00 SICC</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1886,8 +1886,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+86"/>
         <location line="+86"/>
         <location line="+32"/>
-        <source>0.00 SCC</source>
-        <translation>0.00 SCC</translation>
+        <source>0.00 SICC</source>
+        <translation>0.00 SICC</translation>
     </message>
     <message>
         <location line="-191"/>
@@ -1956,8 +1956,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+10"/>
-        <source>123.456 SCC</source>
-        <translation>123.456 SCC</translation>
+        <source>123.456 SICC</source>
+        <translation>123.456 SICC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -2847,7 +2847,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
 </context>
 <context>
-    <name>scc-core</name>
+    <name>sicc-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+124"/>
         <source>Swisscoin-Classic version</source>

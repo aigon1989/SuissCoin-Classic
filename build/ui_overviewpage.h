@@ -91,7 +91,7 @@ public:
         font.setWeight(75);
         labelBalance->setFont(font);
         labelBalance->setCursor(QCursor(Qt::IBeamCursor));
-        labelBalance->setText(QStringLiteral("0 SCC"));
+        labelBalance->setText(QStringLiteral("0 SICC"));
         labelBalance->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(0, QFormLayout::FieldRole, labelBalance);
@@ -105,7 +105,7 @@ public:
         labelStake->setObjectName(QStringLiteral("labelStake"));
         labelStake->setFont(font);
         labelStake->setCursor(QCursor(Qt::IBeamCursor));
-        labelStake->setText(QStringLiteral("0 SCC"));
+        labelStake->setText(QStringLiteral("0 SICC"));
         labelStake->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(1, QFormLayout::FieldRole, labelStake);
@@ -119,7 +119,7 @@ public:
         labelUnconfirmed->setObjectName(QStringLiteral("labelUnconfirmed"));
         labelUnconfirmed->setFont(font);
         labelUnconfirmed->setCursor(QCursor(Qt::IBeamCursor));
-        labelUnconfirmed->setText(QStringLiteral("0 SCC"));
+        labelUnconfirmed->setText(QStringLiteral("0 SICC"));
         labelUnconfirmed->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(2, QFormLayout::FieldRole, labelUnconfirmed);
@@ -132,7 +132,7 @@ public:
         labelImmature = new QLabel(frame);
         labelImmature->setObjectName(QStringLiteral("labelImmature"));
         labelImmature->setFont(font);
-        labelImmature->setText(QStringLiteral("0 SCC"));
+        labelImmature->setText(QStringLiteral("0 SICC"));
         labelImmature->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(3, QFormLayout::FieldRole, labelImmature);
@@ -158,7 +158,7 @@ public:
         labelConsolidated = new QLabel(frame);
         labelConsolidated->setObjectName(QStringLiteral("labelConsolidated"));
         labelConsolidated->setFont(font);
-        labelConsolidated->setText(QStringLiteral("0 SCC"));
+        labelConsolidated->setText(QStringLiteral("0 SICC"));
         labelConsolidated->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(5, QFormLayout::FieldRole, labelConsolidated);

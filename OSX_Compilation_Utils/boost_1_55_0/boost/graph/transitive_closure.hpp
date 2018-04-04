@@ -88,14 +88,14 @@ namespace boost
     iterator_property_map < cg_vertex *, VertexIndexMap, cg_vertex, cg_vertex& >
       component_number(&component_number_vec[0], index_map);
 
-    int num_scc = strong_components(g, component_number,
+    int num_sicc = strong_components(g, component_number,
                                     vertex_index_map(index_map));
 
     std::vector < std::vector < vertex > >components;
-    build_component_lists(g, num_scc, component_number, components);
+    build_component_lists(g, num_sicc, component_number, components);
 
     typedef boost::adjacency_list<boost::vecS, boost::vecS, boost::directedS> CG_t;
-    CG_t CG(num_scc);
+    CG_t CG(num_sicc);
     for (cg_vertex s = 0; s < components.size(); ++s) {
       std::vector < cg_vertex > adj;
       for (size_type i = 0; i < components[s].size(); ++i) {
@@ -212,7 +212,7 @@ namespace boost
       for (boost::tie(i, i_end) = vertices(g); i != i_end; ++i)
         g_to_tc_map[*i] = add_vertex(tc);
     }
-    // Add edges between all the vertices in two adjacent SCCs
+    // Add edges between all the vertices in two adjacent SICCs
     typename std::vector<std::vector<cg_vertex> >::const_iterator si, si_end;
     for (si = CG_vec.begin(), si_end = CG_vec.end(); si != si_end; ++si) {
       cg_vertex s = si - CG_vec.begin();
@@ -225,7 +225,7 @@ namespace boost
                      g_to_tc_map[components[t][l]], tc);
       }
     }
-    // Add edges connecting all vertices in a SCC
+    // Add edges connecting all vertices in a SICC
     for (size_type i = 0; i < components.size(); ++i)
       if (components[i].size() > 1)
         for (size_type k = 0; k < components[i].size(); ++k)

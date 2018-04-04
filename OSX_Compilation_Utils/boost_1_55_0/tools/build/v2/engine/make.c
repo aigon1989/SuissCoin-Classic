@@ -227,7 +227,7 @@ int make0rescan( TARGET * t, TARGET * rescanning )
     TARGETS * c;
 
     /* Check whether we have already found a cycle. */
-    if ( target_scc( t ) == rescanning )
+    if ( target_sicc( t ) == rescanning )
         return 1;
 
     /* If we have already visited this node, ignore it. */
@@ -235,7 +235,7 @@ int make0rescan( TARGET * t, TARGET * rescanning )
         return 0;
 
     /* If t is already updated, ignore it. */
-    if ( t->scc_root == NULL && t->progress > T_MAKE_ACTIVE )
+    if ( t->sicc_root == NULL && t->progress > T_MAKE_ACTIVE )
         return 0;
 
     t->rescanning = rescanning;
@@ -243,17 +243,17 @@ int make0rescan( TARGET * t, TARGET * rescanning )
     {
         TARGET * dependency = c->target;
         /* Always start at the root of each new strongly connected component. */
-        if ( target_scc( dependency ) != target_scc( t ) )
-            dependency = target_scc( dependency );
+        if ( target_sicc( dependency ) != target_sicc( t ) )
+            dependency = target_sicc( dependency );
         result |= make0rescan( dependency, rescanning );
 
         /* Make sure that we pick up the new include node. */
         if ( c->target->includes == rescanning )
             result = 1;
     }
-    if ( result && t->scc_root == NULL )
+    if ( result && t->sicc_root == NULL )
     {
-        t->scc_root = rescanning;
+        t->sicc_root = rescanning;
         rescanning->depends = targetentry( rescanning->depends, t );
     }
     return result;
@@ -413,7 +413,7 @@ void make0
             make0rescan( c->target, rescanning );
         if ( rescanning && c->target->includes && c->target->includes->fate !=
             T_FATE_MAKING )
-            make0rescan( target_scc( c->target->includes ), rescanning );
+            make0rescan( target_sicc( c->target->includes ), rescanning );
     }
 
     if ( located_target )
@@ -446,15 +446,15 @@ void make0
         int cycle_depth = depth;
         for ( c = t->depends; c; c = c->next )
         {
-            TARGET * scc_root = target_scc( c->target );
-            if ( scc_root->fate == T_FATE_MAKING &&
-                ( !scc_root->includes ||
-                  scc_root->includes->fate != T_FATE_MAKING ) )
+            TARGET * sicc_root = target_sicc( c->target );
+            if ( sicc_root->fate == T_FATE_MAKING &&
+                ( !sicc_root->includes ||
+                  sicc_root->includes->fate != T_FATE_MAKING ) )
             {
-                if ( scc_root->depth < cycle_depth )
+                if ( sicc_root->depth < cycle_depth )
                 {
-                    cycle_depth = scc_root->depth;
-                    t->scc_root = scc_root;
+                    cycle_depth = sicc_root->depth;
+                    t->sicc_root = sicc_root;
                 }
             }
         }
@@ -473,16 +473,16 @@ void make0
         /* If we are in a different strongly connected component, pull
          * timestamps from the root.
          */
-        if ( c->target->scc_root )
+        if ( c->target->sicc_root )
         {
-            TARGET * const scc_root = target_scc( c->target );
-            if ( scc_root != t->scc_root )
+            TARGET * const sicc_root = target_sicc( c->target );
+            if ( sicc_root != t->sicc_root )
             {
                 timestamp_max( &c->target->leaf, &c->target->leaf,
-                    &scc_root->leaf );
+                    &sicc_root->leaf );
                 timestamp_max( &c->target->time, &c->target->time,
-                    &scc_root->time );
-                c->target->fate = max( c->target->fate, scc_root->fate );
+                    &sicc_root->time );
+                c->target->fate = max( c->target->fate, sicc_root->fate );
             }
         }
 

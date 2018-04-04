@@ -180,12 +180,12 @@ typedef typename graph_traits<Graph>::adjacency_iterator adjacency_iterator;
 @}
 
 The first step of the algorithm is to compute which vertices are in
-each strongly connected component (SCC) of the graph. This is done
+each strongly connected component (SICC) of the graph. This is done
 with the \code{strong\_components()} function. The result of this
 function is stored in the \code{component\_number} array which maps
-each vertex to the number of the SCC to which it belongs (the
-components are numbered zero through \code{num\_scc}).  We will use
-the SCC numbers for vertices in the condensation graph (CG), so we use
+each vertex to the number of the SICC to which it belongs (the
+components are numbered zero through \code{num\_sicc}).  We will use
+the SICC numbers for vertices in the condensation graph (CG), so we use
 the same integer type \code{cg\_vertex} for both.
 
 @d Compute strongly connected components of the graph
@@ -195,33 +195,33 @@ std::vector<cg_vertex> component_number_vec(num_vertices(g));
 iterator_property_map<cg_vertex*, VertexIndexMap> 
   component_number(&component_number_vec[0], index_map);
 
-int num_scc = strong_components(g, component_number,
+int num_sicc = strong_components(g, component_number,
   vertex_index_map(index_map));
 
 std::vector< std::vector<vertex> > components;
-build_component_lists(g, num_scc, component_number, components);
+build_component_lists(g, num_sicc, component_number, components);
 @}
 
 \noindent Later we will need efficient access to all vertices in the
-same SCC so we create a \code{std::vector} of vertices for each SCC
+same SICC so we create a \code{std::vector} of vertices for each SICC
 and fill it in with the \code{build\_components\_lists()} function
 from \code{strong\_components.hpp}.
 
 The next step is to construct the condensation graph.  There will be
 one vertex in the CG for every strongly connected component in the
 original graph. We will add an edge to the CG whenever there is one or
-more edges in the original graph that has its source in one SCC and
-its target in another SCC.  The data structure we will use for the CG
+more edges in the original graph that has its source in one SICC and
+its target in another SICC.  The data structure we will use for the CG
 is an adjacency-list with a \code{std::set} for each out-edge list. We
 use \code{std::set} because it will automatically discard parallel
 edges. This makes the code simpler since we can just call
-\code{insert()} every time there is an edge connecting two SCCs in the
+\code{insert()} every time there is an edge connecting two SICCs in the
 original graph.
 
 @d Construct the condensation graph (version 1)
 @{
 typedef std::vector< std::set<cg_vertex> > CG_t;
-CG_t CG(num_scc);
+CG_t CG(num_sicc);
 for (cg_vertex s = 0; s < components.size(); ++s) {
   for (size_type i = 0; i < components[s].size(); ++i) {
     vertex u = components[s][i];
@@ -244,7 +244,7 @@ rewritten to use \code{std::vector}.
 @d Construct the condensation graph (version 2)
 @{
 typedef std::vector< std::vector<cg_vertex> > CG_t;
-CG_t CG(num_scc);
+CG_t CG(num_sicc);
 for (cg_vertex s = 0; s < components.size(); ++s) {
   std::vector<cg_vertex> adj;
   for (size_type i = 0; i < components[s].size(); ++i) {
@@ -503,10 +503,10 @@ for (size_type i = 0; i < CG.size(); ++i)
 
 The last stage is to create the transitive closure graph $G^+$ based on
 the transitive closure of the condensation graph $G'^+$. We do this in
-two steps. First we add edges between all the vertices in one SCC to
-all the vertices in another SCC when the two SCCs are adjacent in the
+two steps. First we add edges between all the vertices in one SICC to
+all the vertices in another SICC when the two SICCs are adjacent in the
 condensation graph. Second we add edges to connect each vertex in a
-SCC to every other vertex in the SCC.
+SICC to every other vertex in the SICC.
 
 @d Build transitive closure of the original graph
 @{
@@ -517,7 +517,7 @@ typedef typename graph_traits<GraphTC>::vertex_descriptor tc_vertex;
   for (tie(i, i_end) = vertices(g); i != i_end; ++i)
     g_to_tc_map[*i] = add_vertex(tc);
 }
-// Add edges between all the vertices in two adjacent SCCs
+// Add edges between all the vertices in two adjacent SICCs
 graph_traits<CG_t>::vertex_iterator si, si_end;
 for (tie(si, si_end) = vertices(CG); si != si_end; ++si) {
   cg_vertex s = *si;
@@ -530,7 +530,7 @@ for (tie(si, si_end) = vertices(CG); si != si_end; ++si) {
                  g_to_tc_map[components[t][l]], tc);
   }
 }
-// Add edges connecting all vertices in a SCC
+// Add edges connecting all vertices in a SICC
 for (size_type i = 0; i < components.size(); ++i)
   if (components[i].size() > 1)
     for (size_type k = 0; k < components[i].size(); ++k)
@@ -749,6 +749,6 @@ int main(int, char*[])
 
 \end{document}
 % LocalWords:  Siek Prus Succ typename GraphTC VertexIndexMap const tc typedefs
-% LocalWords:  typedef iterator adjacency SCC num scc CG cg resize SCCs di ch
+% LocalWords:  typedef iterator adjacency SICC num sicc CG cg resize SICCs di ch
 % LocalWords:  traversal ith namespace topo inserter  gx hy struct pos inf max
 % LocalWords:  rbegin vec si hpp ifndef endif jtran ggcl

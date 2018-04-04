@@ -7,14 +7,14 @@
 //  Authors: Nick Edmonds
 //           Douglas Gregor
 //           Andrew Lumsdaine
-#ifndef BOOST_GRAPH_DISTRIBUTED_SCC_HPP
-#define BOOST_GRAPH_DISTRIBUTED_SCC_HPP
+#ifndef BOOST_GRAPH_DISTRIBUTED_SICC_HPP
+#define BOOST_GRAPH_DISTRIBUTED_SICC_HPP
 
 #ifndef BOOST_GRAPH_USE_MPI
 #error "Parallel BGL files should not be included unless <boost/graph/use_mpi.hpp> has been included"
 #endif
 
-// #define PBGL_SCC_DEBUG
+// #define PBGL_SICC_DEBUG
 
 #include <boost/assert.hpp>
 #include <boost/property_map/property_map.hpp>
@@ -37,7 +37,7 @@
 #include <boost/optional.hpp>
 #include <boost/graph/distributed/detail/filtered_queue.hpp>
 #include <boost/graph/distributed/adjacency_list.hpp>
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   #include <iostream>
   #include <cstdlib>
   #include <iomanip>
@@ -48,12 +48,12 @@
 #include <map>
 #include <boost/graph/parallel/container_traits.hpp>
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
 #  include <boost/graph/accounting.hpp>
-#endif /* PBGL_SCC_DEBUG */
+#endif /* PBGL_SICC_DEBUG */
 
 // If your graph is likely to have large numbers of small strongly connected
-// components then running the sequential SCC algorithm on the local subgraph
+// components then running the sequential SICC algorithm on the local subgraph
 // and filtering components with no remote edges may increase performance
 // #define FILTER_LOCAL_COMPONENTS
 
@@ -129,11 +129,11 @@ struct vertex_identity_property_map
 template <typename T>
 inline void synchronize( vertex_identity_property_map<T> & ) { }
 
-/* BFS visitor for SCC */
+/* BFS visitor for SICC */
 template<typename Graph, typename SourceMap>
-struct scc_discovery_visitor : bfs_visitor<>
+struct sicc_discovery_visitor : bfs_visitor<>
 {
-  scc_discovery_visitor(SourceMap& sourceM)
+  sicc_discovery_visitor(SourceMap& sourceM)
     : sourceM(sourceM) {}
 
   template<typename Edge>
@@ -195,7 +195,7 @@ namespace boost { namespace graph { namespace distributed {
       // Initialization
       //
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   accounting::time_type start = accounting::get_time();
 #endif
 
@@ -211,10 +211,10 @@ namespace boost { namespace graph { namespace distributed {
         if( out_degree( get(fr, *vstart), gr) > 0 && out_degree(*vstart, g) > 0 )
           new_vertex_sets[0].push_back( *vstart );
 
-      // Perform sequential SCC on local subgraph, filter all components with external
+      // Perform sequential SICC on local subgraph, filter all components with external
       // edges, mark remaining components and remove them from vertex_sets
 #ifdef FILTER_LOCAL_COMPONENTS  
-      // This doesn't actually speed up SCC in connected graphs it seems, but it does work
+      // This doesn't actually speed up SICC in connected graphs it seems, but it does work
       // and may help in the case where there are lots of small strong components.
       {
         local_subgraph<const Graph> ls(g);
@@ -276,19 +276,19 @@ namespace boost { namespace graph { namespace distributed {
       all_gather( pg, new_vertex_sets[0].begin(), new_vertex_sets[0].end(), vertex_sets[0] );
       new_vertex_sets.clear();
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   accounting::time_type end = accounting::get_time();
   if(id == 0)
-    std::cerr << "Trim local SCCs time = " << accounting::print_time(end - start) << " seconds.\n";
+    std::cerr << "Trim local SICCs time = " << accounting::print_time(end - start) << " seconds.\n";
 #endif
 
       if( vertex_sets[0].empty() ) return;
 
       //
-      // Recursively determine SCCs
+      // Recursively determine SICCs
       //
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   int iterations = 0;
 #endif
 
@@ -297,7 +297,7 @@ namespace boost { namespace graph { namespace distributed {
 
       do {
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   if(id == 0) {
     printf("\n\nIteration %d:\n\n", iterations++);
 
@@ -385,14 +385,14 @@ namespace boost { namespace graph { namespace distributed {
           Qr.push(get(fr, local_start[i]));
         }
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   end = accounting::get_time();
   if(id == 0)
     std::cerr << "  Initialize BFS time = " << accounting::print_time(end - start) << " seconds.\n";
   start = accounting::get_time();
 #endif
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   accounting::time_type start2 = accounting::get_time();
 #endif
 
@@ -405,7 +405,7 @@ namespace boost { namespace graph { namespace distributed {
         for( std::size_t i = 0; i < vertex_sets.size(); ++i )
           put(succ_map, vertex_sets[i][0], vertex_sets[i][0]);
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   accounting::time_type end2 = accounting::get_time();
   if(id == 0)
     std::cerr << "  Initialize forward BFS time = " << accounting::print_time(end2 - start2) << " seconds.\n";
@@ -413,16 +413,16 @@ namespace boost { namespace graph { namespace distributed {
 
         if (active_vertices < 0.05*n)
           breadth_first_search(fg, local_start[0], Q,
-                               detail::scc_discovery_visitor<filtered_graph<const Graph, keep_all,
+                               detail::sicc_discovery_visitor<filtered_graph<const Graph, keep_all,
                                                                             detail::in_subset<VertexSet> >, ParentMap>
                                (succ_map),
                                color_map);
         else
           breadth_first_search(g, local_start[0], Q,
-                               detail::scc_discovery_visitor<const Graph, ParentMap>(succ_map),
+                               detail::sicc_discovery_visitor<const Graph, ParentMap>(succ_map),
                                color_map);
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   start2 = accounting::get_time();
 #endif
 
@@ -434,7 +434,7 @@ namespace boost { namespace graph { namespace distributed {
         for( std::size_t i = 0; i < vertex_sets.size(); ++i )
           put(pred_map, get(fr, vertex_sets[i][0]), vertex_sets[i][0]);
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   end2 = accounting::get_time();
   if(id == 0)
     std::cerr << "  Initialize reverse BFS time = " << accounting::print_time(end2 - start2) << " seconds.\n";
@@ -443,17 +443,17 @@ namespace boost { namespace graph { namespace distributed {
         if (active_vertices < 0.05*n)
           breadth_first_search(fgr, get(fr, local_start[0]),
                                Qr,
-                               detail::scc_discovery_visitor<filtered_graph<const ReverseGraph, keep_all,
+                               detail::sicc_discovery_visitor<filtered_graph<const ReverseGraph, keep_all,
                                                                             detail::in_subset<Rev_VertexSet> >, Rev_ParentMap>
                                (pred_map),
                                color_map);
         else
           breadth_first_search(gr, get(fr, local_start[0]),
                                Qr,
-                               detail::scc_discovery_visitor<const ReverseGraph, Rev_ParentMap>(pred_map),
+                               detail::sicc_discovery_visitor<const ReverseGraph, Rev_ParentMap>(pred_map),
                                color_map);
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   end = accounting::get_time();
   if(id == 0)
     std::cerr << "  Perform forward and reverse BFS time = " << accounting::print_time(end - start) << " seconds.\n";
@@ -552,7 +552,7 @@ namespace boost { namespace graph { namespace distributed {
           }
         }
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   end = accounting::get_time();
   if(id == 0)
     std::cerr << "  All gather successors and predecessors time = " << accounting::print_time(end - start) << " seconds.\n";
@@ -630,7 +630,7 @@ namespace boost { namespace graph { namespace distributed {
 
             set_map[v].succ.clear();
 
-            // Label SCC just identified with the 'first' vertex in that SCC
+            // Label SICC just identified with the 'first' vertex in that SICC
             for( std::size_t j = 0; j < set_map[v].intersect.size(); j++ )
               put(c, set_map[v].intersect[j], set_map[v].intersect[0]);
 
@@ -638,7 +638,7 @@ namespace boost { namespace graph { namespace distributed {
           }
         }
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   end = accounting::get_time();
   if(id == 0)
     std::cerr << "  Perform set arithemetic time = " << accounting::print_time(end - start) << " seconds.\n";
@@ -660,7 +660,7 @@ namespace boost { namespace graph { namespace distributed {
         all_gather( pg, serial_sets.begin(), serial_sets.end(), all_serial_sets );
         detail::unmarshal_set<Graph>( all_serial_sets, vertex_sets );
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   end = accounting::get_time();
   if(id == 0) {
     std::cerr << "  Serialize and gather new vertex sets time = " << accounting::print_time(end - start) << " seconds.\n\n\n";
@@ -700,7 +700,7 @@ namespace boost { namespace graph { namespace distributed {
          all_gather(pg, new_set.begin(), new_set.end(), vertex_sets[i]);
          std::sort(vertex_sets[i].begin(), vertex_sets[i].end(), std::less<vertex_descriptor>());
        }
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   end = accounting::get_time();
   if(id == 0)
     std::cerr << "  Trim vertex sets time = " << accounting::print_time(end - start) << " seconds.\n\n\n";
@@ -710,7 +710,7 @@ namespace boost { namespace graph { namespace distributed {
       } while ( !vertex_sets.empty() );
 
 
-      // Label vertices not in a SCC as their own SCC
+      // Label vertices not in a SICC as their own SICC
       for( boost::tie(vstart, vend) = vertices(g); vstart != vend; vstart++ )
         if( get(c, *vstart) == graph_traits<Graph>::null_vertex() )
           put(c, *vstart, *vstart);
@@ -862,7 +862,7 @@ namespace boost { namespace graph { namespace distributed {
                                     VertexIndexMap> IsoMap;
       typename boost::graph::parallel::process_group_type<Graph>::type pg = process_group(g);
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   accounting::time_type start = accounting::get_time();
 #endif
 
@@ -878,7 +878,7 @@ namespace boost { namespace graph { namespace distributed {
 
       build_reverse_graph(g, gr, fr, rf);
 
-#ifdef PBGL_SCC_DEBUG
+#ifdef PBGL_SICC_DEBUG
   accounting::time_type end = accounting::get_time();
   if(process_id(process_group(g)) == 0)
     std::cerr << "Reverse graph initialization time = " << accounting::print_time(end - start) << " seconds.\n";
@@ -935,7 +935,7 @@ namespace boost { namespace graph { namespace distributed {
         return boost::strong_components(ls, c);
       }
 
-      // Create a VertexComponentMap for intermediate labeling of SCCs
+      // Create a VertexComponentMap for intermediate labeling of SICCs
       std::vector<vertex_descriptor> r_s(num_vertices(g), graph_traits<Graph>::null_vertex());
       VertexComponentMap r(r_s.begin(), vertex_index_map);
 
@@ -979,4 +979,4 @@ strong_components
 
 } /* end namespace boost */
 
-#endif // BOOST_GRAPH_DISTRIBUTED_SCC_HPP
+#endif // BOOST_GRAPH_DISTRIBUTED_SICC_HPP

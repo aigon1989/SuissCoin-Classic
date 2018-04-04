@@ -434,7 +434,7 @@ bool GetMyExternalIP(CNetAddr& ipRet) {
 void ThreadGetMyExternalIP(void* parg)
 {
     // Make this thread recognisable as the external IP detection thread
-    RenameThread("scc-ext-ip");
+    RenameThread("sicc-ext-ip");
 
     CNetAddr addrLocalHost;
     if (GetMyExternalIP(addrLocalHost))
@@ -672,7 +672,7 @@ void CNode::copyStats(CNodeStats &stats)
 void ThreadSocketHandler(void* parg)
 {
     // Make this thread recognisable as the networking thread
-    RenameThread("scc-net");
+    RenameThread("sicc-net");
 
     try
     {
@@ -1036,7 +1036,7 @@ void ThreadSocketHandler2(void* parg)
 void ThreadMapPort(void* parg)
 {
     // Make this thread recognisable as the UPnP thread
-    RenameThread("scc-UPnP");
+    RenameThread("sicc-UPnP");
 
     try
     {
@@ -1193,14 +1193,14 @@ void MapPort()
 // The second name should resolve to a list of seed addresses.
 //a.gonzalez - quitamos dns seeds
 static const char *strDNSSeed[][2] = {
-    //{"sccseed0", "seed0.swisscoin-classic.com"},
-    //{"sccseed1", "seed1.swisscoin-classic.com"},
+    //{"siccseed0", "seed0.swisscoin-classic.com"},
+    //{"siccseed1", "seed1.swisscoin-classic.com"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("scc-dnsseed");
+    RenameThread("sicc-dnsseed");
 
     try
     {
@@ -1296,7 +1296,7 @@ void ThreadDumpAddress2(void* parg)
 void ThreadDumpAddress(void* parg)
 {
     // Make this thread recognisable as the address dumping thread
-    RenameThread("scc-adrdump");
+    RenameThread("sicc-adrdump");
 
     try
     {
@@ -1311,7 +1311,7 @@ void ThreadDumpAddress(void* parg)
 void ThreadOpenConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("scc-opencon");
+    RenameThread("sicc-opencon");
 
     try
     {
@@ -1500,7 +1500,7 @@ void ThreadOpenConnections2(void* parg)
 void ThreadOpenAddedConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("scc-opencon");
+    RenameThread("sicc-opencon");
 
     try
     {
@@ -1647,7 +1647,7 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
 void ThreadMessageHandler(void* parg)
 {
     // Make this thread recognisable as the message handling thread
-    RenameThread("scc-msghand");
+    RenameThread("sicc-msghand");
 
     try
     {
@@ -1898,7 +1898,7 @@ void static Discover()
 void StartNode(void* parg)
 {
     // Make this thread recognisable as the startup thread
-    RenameThread("scc-start");
+    RenameThread("sicc-start");
 
     if (semOutbound == NULL) {
         // initialize semaphore

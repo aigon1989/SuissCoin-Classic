@@ -1,4 +1,4 @@
-digraph SCC {
+digraph SICC {
  size="3,4"
  ratio="fill"
  edge[style="bold"]

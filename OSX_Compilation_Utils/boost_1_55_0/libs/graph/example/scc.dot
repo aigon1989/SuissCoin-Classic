@@ -1,5 +1,5 @@
 
-digraph SCC {
+digraph SICC {
  node[shape=circle];
  ratio=1.2
  a

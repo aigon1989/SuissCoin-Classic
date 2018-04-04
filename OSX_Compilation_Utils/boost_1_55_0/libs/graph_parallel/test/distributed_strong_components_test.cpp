@@ -8,8 +8,8 @@
 //           Douglas Gregor
 //           Andrew Lumsdaine
 
-// SCC won't work with CSR currently due to the way the reverse graph 
-// is constructed in the SCC algorithm
+// SICC won't work with CSR currently due to the way the reverse graph 
+// is constructed in the SICC algorithm
 
 #include <boost/graph/use_mpi.hpp>
 
@@ -144,7 +144,7 @@ test_distributed_strong_components(int n, double _p, bool verify, bool emit_dot_
                 break;
           
           if ( i < n )
-            std::cerr << "Unable to verify SCC result...\n";
+            std::cerr << "Unable to verify SICC result...\n";
           else
             std::cerr << "Passed verification... " << seq_num_components << " strong components\n"; 
         }
@@ -153,7 +153,7 @@ test_distributed_strong_components(int n, double _p, bool verify, bool emit_dot_
           synchronize(component);
         }
       if ( emit_dot_file )
-        write_graphviz("scc.dot", g, paint_by_number(component));
+        write_graphviz("sicc.dot", g, paint_by_number(component));
     }
 }
 

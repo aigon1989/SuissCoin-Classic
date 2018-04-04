@@ -215,7 +215,7 @@ struct _target
 
     int        asynccnt;              /* child deps outstanding */
     TARGETS  * parents;               /* used by make1() for completion */
-    TARGET   * scc_root;              /* used by make to resolve cyclic includes
+    TARGET   * sicc_root;              /* used by make to resolve cyclic includes
                                        */
     TARGET   * rescanning;            /* used by make0 to mark visited targets
                                        * when rescanning
@@ -262,7 +262,7 @@ void      target_include_many            ( TARGET * const including,
 TARGETS * targetlist                     ( TARGETS *, LIST * target_names );
 void      touch_target                   ( OBJECT * const );
 void      clear_includes                 ( TARGET * );
-TARGET  * target_scc                     ( TARGET * );
+TARGET  * target_sicc                     ( TARGET * );
 
 /* Final module cleanup. */
 void rules_done();

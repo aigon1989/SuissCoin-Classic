@@ -508,17 +508,17 @@ public:
         labelCoinControlBytesText->setText(QApplication::translate("SendCoinsDialog", "Bytes:", nullptr));
         labelCoinControlBytes->setText(QApplication::translate("SendCoinsDialog", "0", nullptr));
         labelCoinControlAmountText->setText(QApplication::translate("SendCoinsDialog", "Amount:", nullptr));
-        labelCoinControlAmount->setText(QApplication::translate("SendCoinsDialog", "0.00 SCC", nullptr));
+        labelCoinControlAmount->setText(QApplication::translate("SendCoinsDialog", "0.00 SICC", nullptr));
         labelCoinControlPriorityText->setText(QApplication::translate("SendCoinsDialog", "Priority:", nullptr));
         labelCoinControlPriority->setText(QApplication::translate("SendCoinsDialog", "medium", nullptr));
         labelCoinControlFeeText->setText(QApplication::translate("SendCoinsDialog", "Fee:", nullptr));
-        labelCoinControlFee->setText(QApplication::translate("SendCoinsDialog", "0.00 SCC", nullptr));
+        labelCoinControlFee->setText(QApplication::translate("SendCoinsDialog", "0.00 SICC", nullptr));
         labelCoinControlLowOutputText->setText(QApplication::translate("SendCoinsDialog", "Low Output:", nullptr));
         labelCoinControlLowOutput->setText(QApplication::translate("SendCoinsDialog", "no", nullptr));
         labelCoinControlAfterFeeText->setText(QApplication::translate("SendCoinsDialog", "After Fee:", nullptr));
-        labelCoinControlAfterFee->setText(QApplication::translate("SendCoinsDialog", "0.00 SCC", nullptr));
+        labelCoinControlAfterFee->setText(QApplication::translate("SendCoinsDialog", "0.00 SICC", nullptr));
         labelCoinControlChangeText->setText(QApplication::translate("SendCoinsDialog", "Change:", nullptr));
-        labelCoinControlChange->setText(QApplication::translate("SendCoinsDialog", "0.00 SCC", nullptr));
+        labelCoinControlChange->setText(QApplication::translate("SendCoinsDialog", "0.00 SICC", nullptr));
         checkBoxCoinControlChange->setText(QApplication::translate("SendCoinsDialog", "custom change address", nullptr));
         labelCoinControlChangeLabel->setText(QString());
 #ifndef QT_NO_TOOLTIP
@@ -530,7 +530,7 @@ public:
 #endif // QT_NO_TOOLTIP
         clearButton->setText(QApplication::translate("SendCoinsDialog", "Clear &all", nullptr));
         label->setText(QApplication::translate("SendCoinsDialog", "Balance:", nullptr));
-        labelBalance->setText(QApplication::translate("SendCoinsDialog", "123.456 SCC", nullptr));
+        labelBalance->setText(QApplication::translate("SendCoinsDialog", "123.456 SICC", nullptr));
 #ifndef QT_NO_TOOLTIP
         sendButton->setToolTip(QApplication::translate("SendCoinsDialog", "Confirm the send action", nullptr));
 #endif // QT_NO_TOOLTIP

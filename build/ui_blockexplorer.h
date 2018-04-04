@@ -311,12 +311,12 @@ public:
         blockTimeText->setText(QApplication::translate("BlockExplorer", "General data:", nullptr));
         hashData->setText(QApplication::translate("BlockExplorer", "0x0", nullptr));
         merkleText->setText(QApplication::translate("BlockExplorer", "Merkle root:", nullptr));
-        valueData->setText(QApplication::translate("BlockExplorer", "0.00 SCC", nullptr));
+        valueData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", nullptr));
         txTimeText->setText(QApplication::translate("BlockExplorer", "General data:", nullptr));
         outputData->setText(QApplication::translate("BlockExplorer", "N/A", nullptr));
-        coinSupplyData->setText(QApplication::translate("BlockExplorer", "0.00 SCC", nullptr));
+        coinSupplyData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", nullptr));
         baseText->setText(QApplication::translate("BlockExplorer", "Coin base:", nullptr));
-        feeData->setText(QApplication::translate("BlockExplorer", "0.00 SCC", nullptr));
+        feeData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", nullptr));
         coinSupplyText->setText(QApplication::translate("BlockExplorer", "Coin supply:", nullptr));
         blockTxText->setText(QApplication::translate("BlockExplorer", "Payments:", nullptr));
         feeText->setText(QApplication::translate("BlockExplorer", "Fee paid:", nullptr));

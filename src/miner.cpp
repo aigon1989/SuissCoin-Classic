@@ -496,7 +496,7 @@ void StakeMiner(CWallet *pwallet) {
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as a stake mining thread
-    RenameThread("scc-stakeminer");
+    RenameThread("sicc-stakeminer");
 
     // Each thread has its own counter
     unsigned int nExtraNonce = 0;

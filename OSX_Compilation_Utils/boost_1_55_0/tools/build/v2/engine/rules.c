@@ -211,19 +211,19 @@ void touch_target( OBJECT * const t )
 
 
 /*
- * target_scc() - returns the root of a strongly connected component that this
+ * target_sicc() - returns the root of a strongly connected component that this
  * target is a part of.
  */
 
-TARGET * target_scc( TARGET * t )
+TARGET * target_sicc( TARGET * t )
 {
     TARGET * result = t;
-    while ( result->scc_root )
-        result = result->scc_root;
-    while ( t->scc_root )
+    while ( result->sicc_root )
+        result = result->sicc_root;
+    while ( t->sicc_root )
     {
-        TARGET * const tmp = t->scc_root;
-        t->scc_root = result;
+        TARGET * const tmp = t->sicc_root;
+        t->sicc_root = result;
         t = tmp;
     }
     return result;

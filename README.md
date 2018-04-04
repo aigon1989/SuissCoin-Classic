@@ -1,7 +1,7 @@
 Swisscoin-Classic
 ===========
 
-Swisscoin-Classic (SCC) is a decentralised open source digital currency.
+Swisscoin-Classic (SICC) is a decentralised open source digital currency.
 
  - advanced hybrid proof-of-work (PoW) and proof-of-stake (PoS)
  - 5 bilion coins to be produced
@@ -13,7 +13,7 @@ Swisscoin-Classic (SCC) is a decentralised open source digital currency.
  - time warp and instamining protection
  - advanced checkpointing against 51% attacks
  - transaction messaging supported
- - PoW and PoS blocks carry the same fixed reward of 100 SCC
+ - PoW and PoS blocks carry the same fixed reward of 100 SICC
  - 6 confirmations for regular transactions
  - 200 confirmations for minted coins
  - very low transaction fees (most transactions are free)
