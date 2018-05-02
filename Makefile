@@ -639,6 +639,7 @@ Makefile: swisscoin-classic-qt.pro /opt/mxe/usr/i686-w64-mingw32.static/qt5/mksp
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_config.prf \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++/qmake.conf \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exclusive_builds.prf \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/toolchain.prf \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_pre.prf \
@@ -882,6 +883,7 @@ Makefile: swisscoin-classic-qt.pro /opt/mxe/usr/i686-w64-mingw32.static/qt5/mksp
 /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_config.prf:
 /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++/qmake.conf:
 /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exclusive_builds.prf:
 /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/toolchain.prf:
 /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_pre.prf:
@@ -928,7 +930,7 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) swisscoin-classic-qt.zip $(SOURCES) $(DIST) swisscoin-classic-qt.pro /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_pre.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/qdevice.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/device_config.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/sanitize.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/gcc-base.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/g++-base.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/angle.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/windows-vulkan.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/qconfig.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3danimation.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3danimation_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dcore.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dcore_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dextras.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dextras_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dinput.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dinput_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dlogic.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dlogic_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquick.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquick_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickanimation.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickanimation_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickextras.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickextras_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickinput.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickinput_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickrender.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickrender_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickscene2d.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickscene2d_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3drender.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3drender_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_accessibility_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axbase.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axbase_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axcontainer.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axcontainer_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axserver.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axserver_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_bluetooth.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_bluetooth_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_charts.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_charts_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_concurrent.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_concurrent_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_core.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_core_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_datavisualization.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_datavisualization_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_dbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_dbus_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_devicediscovery_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_edid_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_fb_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_fontdatabase_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gamepad.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gamepad_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gui.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gui_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_help.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_help_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_location.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_location_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimedia.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimedia_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimediawidgets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_network.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_network_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_nfc.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_nfc_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_opengl.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_opengl_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_openglextensions.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_openglextensions_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_packetprotocol_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_platformcompositor_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_positioning.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_positioning_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_printsupport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_printsupport_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_purchasing.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_purchasing_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qml.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qml_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmldebug_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmldevtools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmltest.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmltest_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quick.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quick_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickcontrols2.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickcontrols2_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickparticles_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quicktemplates2_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickwidgets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickwidgets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_script.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_script_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scripttools.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scripttools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scxml.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scxml_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sensors.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sensors_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialbus_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialport_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sql.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sql_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_svg.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_svg_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_testlib.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_testlib_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_texttospeech.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_texttospeech_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_theme_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_uiplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_uitools.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_uitools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_webchannel.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_webchannel_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_websockets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_websockets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_widgets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_widgets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_winextras.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_winextras_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xml.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xml_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xmlpatterns.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xmlpatterns_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_zlib_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_defaultgeometryloader.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_dsengine.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_gltfgeometryloader.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_gltfsceneexport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_gltfsceneimport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qgenericbearer.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qgif.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qicns.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qico.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qjp2.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qjpeg.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qminimal.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_debugger.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_inspector.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_local.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_messages.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_native.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_nativedebugger.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_profiler.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_quickprofiler.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_server.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_tcp.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmng.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qoffscreen.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlite.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlmysql.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlodbc.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlpsql.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqltds.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsvg.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsvgicon.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtaudio_windows.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtexttospeech_sapi.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtga.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_esri.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_itemsoverlay.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_mapbox.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_nokia.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_osm.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtiff.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtmedia_audioengine.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtmultimedia_m3u.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtpeakcanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtposition_geoclue.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtposition_positionpoll.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsensorgestures_plugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsensorgestures_shakeplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsensors_generic.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsysteccanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qttinycanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtuiotouchplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtvectorcanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtvirtualkeyboardplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwbmp.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwebp.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwindows.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwindowsvistastyle.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_scene2d.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_windowsprintersupport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_xinputgamepad.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_functions.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_config.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++/qmake.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_post.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exclusive_builds.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/toolchain.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_pre.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/win32/default_pre.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/resolve_config.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_post.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/precompile_header.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/warn_on.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/resources.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/moc.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/win32/opengl.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/uic.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qmake_use.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/file_copies.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/win32/windows.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/testcase_targets.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exceptions.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/yacc.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/lex.prf swisscoin-classic-qt.pro src/qt/bitcoin.qrc /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/qtmain.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/styles/qwindowsvistastyle.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/platforms/qwindows.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qgif.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qicns.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qico.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qjp2.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qjpeg.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qmng.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qtga.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qtiff.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qwbmp.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qwebp.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/bearer/qgenericbearer.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Widgets.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Gui.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Network.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Core.prl "src/qt/locale/bitcoin_en.ts src/qt/locale/bitcoin_ru.ts" src/qt/locale/bitcoin_en.ts src/qt/locale/bitcoin_ru.ts src/qt/locale/bitcoin_en.ts src/qt/locale/bitcoin_ru.ts  src/qt/bitcoin.qrc /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/data/dummy.cpp src/qt/bitcoingui.h src/qt/transactiontablemodel.h src/qt/addresstablemodel.h src/qt/optionsdialog.h src/qt/coincontroldialog.h src/qt/coincontroltreewidget.h src/qt/sendcoinsdialog.h src/qt/addressbookpage.h src/qt/signverifymessagedialog.h src/qt/aboutdialog.h src/qt/editaddressdialog.h src/qt/bitcoinaddressvalidator.h src/alert.h src/addrman.h src/base58.h src/bignum.h src/checkpoints.h src/compat.h src/coincontrol.h src/sync.h src/util.h src/uint256.h src/kernel.h src/neoscrypt.h src/scrypt.h src/pbkdf2.h src/serialize.h src/strlcpy.h src/main.h src/miner.h src/net.h src/key.h src/db.h src/txdb.h src/leveldb.h src/walletdb.h src/script.h src/init.h src/irc.h src/mruset.h src/json/json_spirit_writer_template.h src/json/json_spirit_writer.h src/json/json_spirit_value.h src/json/json_spirit_utils.h src/json/json_spirit_stream_reader.h src/json/json_spirit_reader_template.h src/json/json_spirit_reader.h src/json/json_spirit_error_position.h src/json/json_spirit.h src/qt/clientmodel.h src/qt/guiutil.h src/qt/transactionrecord.h src/qt/guiconstants.h src/qt/optionsmodel.h src/qt/monitoreddatamapper.h src/qt/trafficgraphwidget.h src/qt/transactiondesc.h src/qt/transactiondescdialog.h src/qt/bitcoinamountfield.h src/wallet.h src/keystore.h src/qt/transactionfilterproxy.h src/qt/transactionview.h src/qt/walletmodel.h src/bitcoinrpc.h src/qt/overviewpage.h src/qt/csvmodelwriter.h src/crypter.h src/qt/sendcoinsentry.h src/qt/qvalidatedlineedit.h src/qt/bitcoinunits.h src/qt/qvaluecombobox.h src/qt/askpassphrasedialog.h src/protocol.h src/qt/notificator.h src/qt/qtipcserver.h src/allocators.h src/ui_interface.h src/qt/rpcconsole.h src/qt/blockexplorer.h src/version.h src/netbase.h src/clientversion.h  src/qt/bitcoin.cpp src/qt/bitcoingui.cpp src/qt/transactiontablemodel.cpp src/qt/addresstablemodel.cpp src/qt/optionsdialog.cpp src/qt/sendcoinsdialog.cpp src/qt/coincontroldialog.cpp src/qt/coincontroltreewidget.cpp src/qt/addressbookpage.cpp src/qt/signverifymessagedialog.cpp src/qt/aboutdialog.cpp src/qt/editaddressdialog.cpp src/qt/bitcoinaddressvalidator.cpp src/alert.cpp src/version.cpp src/sync.cpp src/util.cpp src/netbase.cpp src/key.cpp src/script.cpp src/main.cpp src/miner.cpp src/init.cpp src/net.cpp src/irc.cpp src/checkpoints.cpp src/addrman.cpp src/db.cpp src/leveldb.cpp src/txdb.cpp src/walletdb.cpp src/qt/clientmodel.cpp src/qt/guiutil.cpp src/qt/transactionrecord.cpp src/qt/optionsmodel.cpp src/qt/monitoreddatamapper.cpp src/qt/trafficgraphwidget.cpp src/qt/transactiondesc.cpp src/qt/transactiondescdialog.cpp src/qt/bitcoinstrings.cpp src/qt/bitcoinamountfield.cpp src/wallet.cpp src/keystore.cpp src/qt/transactionfilterproxy.cpp src/qt/transactionview.cpp src/qt/walletmodel.cpp src/bitcoinrpc.cpp src/rpcdump.cpp src/rpcnet.cpp src/rpcmining.cpp src/rpcwallet.cpp src/rpcblockchain.cpp src/rpcrawtransaction.cpp src/qt/overviewpage.cpp src/qt/csvmodelwriter.cpp src/crypter.cpp src/qt/sendcoinsentry.cpp src/qt/qvalidatedlineedit.cpp src/qt/bitcoinunits.cpp src/qt/qvaluecombobox.cpp src/qt/askpassphrasedialog.cpp src/protocol.cpp src/qt/notificator.cpp src/qt/qtipcserver.cpp src/qt/rpcconsole.cpp src/qt/blockexplorer.cpp src/noui.cpp src/kernel.cpp src/neoscrypt.c src/neoscrypt_asm.S src/scrypt-arm.S src/scrypt-x86.S src/scrypt-x86_64.S src/scrypt.cpp src/pbkdf2.cpp src/qt/forms/coincontroldialog.ui src/qt/forms/sendcoinsdialog.ui src/qt/forms/addressbookpage.ui src/qt/forms/signverifymessagedialog.ui src/qt/forms/aboutdialog.ui src/qt/forms/editaddressdialog.ui src/qt/forms/transactiondescdialog.ui src/qt/forms/overviewpage.ui src/qt/forms/sendcoinsentry.ui src/qt/forms/askpassphrasedialog.ui src/qt/forms/rpcconsole.ui src/qt/forms/blockexplorer.ui src/qt/forms/optionsdialog.ui    
+	$(ZIP) swisscoin-classic-qt.zip $(SOURCES) $(DIST) swisscoin-classic-qt.pro /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_pre.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/qdevice.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/device_config.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/sanitize.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/gcc-base.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/g++-base.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/angle.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/common/windows-vulkan.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/qconfig.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3danimation.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3danimation_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dcore.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dcore_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dextras.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dextras_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dinput.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dinput_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dlogic.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dlogic_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquick.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquick_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickanimation.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickanimation_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickextras.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickextras_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickinput.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickinput_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickrender.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickrender_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickscene2d.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3dquickscene2d_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3drender.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_3drender_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_accessibility_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axbase.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axbase_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axcontainer.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axcontainer_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axserver.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_axserver_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_bluetooth.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_bluetooth_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_bootstrap_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_charts.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_charts_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_concurrent.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_concurrent_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_core.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_core_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_datavisualization.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_datavisualization_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_dbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_dbus_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_devicediscovery_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_edid_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_fb_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_fontdatabase_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gamepad.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gamepad_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gui.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_gui_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_help.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_help_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_location.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_location_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimedia.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimedia_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimediawidgets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_multimediawidgets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_network.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_network_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_nfc.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_nfc_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_opengl.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_opengl_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_openglextensions.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_openglextensions_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_packetprotocol_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_platformcompositor_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_positioning.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_positioning_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_printsupport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_printsupport_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_purchasing.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_purchasing_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qml.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qml_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmldebug_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmldevtools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmltest.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qmltest_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quick.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quick_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickcontrols2.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickcontrols2_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickparticles_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quicktemplates2_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickwidgets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_quickwidgets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_script.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_script_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scripttools.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scripttools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scxml.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_scxml_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sensors.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sensors_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialbus_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_serialport_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sql.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_sql_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_svg.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_svg_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_testlib.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_testlib_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_texttospeech.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_texttospeech_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_theme_support_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_uiplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_uitools.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_uitools_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_webchannel.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_webchannel_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_websockets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_websockets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_widgets.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_widgets_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_winextras.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_winextras_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xml.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xml_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xmlpatterns.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_xmlpatterns_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_lib_zlib_private.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_defaultgeometryloader.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_dsengine.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_gltfgeometryloader.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_gltfsceneexport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_gltfsceneimport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qgenericbearer.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qgif.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qicns.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qico.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qjp2.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qjpeg.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qminimal.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_debugger.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_inspector.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_local.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_messages.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_native.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_nativedebugger.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_profiler.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_quickprofiler.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_server.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmldbg_tcp.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qmng.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qoffscreen.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlite.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlmysql.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlodbc.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqlpsql.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsqltds.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsvg.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qsvgicon.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtaudio_windows.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtexttospeech_sapi.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtga.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_esri.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_itemsoverlay.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_mapbox.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_nokia.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtgeoservices_osm.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtiff.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtmedia_audioengine.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtmultimedia_m3u.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtpeakcanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtposition_geoclue.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtposition_positionpoll.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsensorgestures_plugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsensorgestures_shakeplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsensors_generic.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtsysteccanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qttinycanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtuiotouchplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtvectorcanbus.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qtvirtualkeyboardplugin.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwbmp.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwebp.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwindows.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_qwindowsvistastyle.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_scene2d.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_windowsprintersupport.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/modules/qt_plugin_xinputgamepad.pri /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_functions.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt_config.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/win32-g++/qmake.conf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/spec_post.prf .qmake.stash /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exclusive_builds.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/toolchain.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_pre.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/win32/default_pre.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/resolve_config.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/default_post.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/precompile_header.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/warn_on.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qt.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/resources.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/moc.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/win32/opengl.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/uic.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/qmake_use.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/file_copies.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/win32/windows.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/testcase_targets.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/exceptions.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/yacc.prf /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/lex.prf swisscoin-classic-qt.pro src/qt/bitcoin.qrc /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/qtmain.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/styles/qwindowsvistastyle.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/platforms/qwindows.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qgif.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qicns.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qico.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qjp2.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qjpeg.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qmng.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qtga.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qtiff.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qwbmp.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/imageformats/qwebp.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/plugins/bearer/qgenericbearer.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Widgets.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Gui.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Network.prl /opt/mxe/usr/i686-w64-mingw32.static/qt5/lib/Qt5Core.prl "src/qt/locale/bitcoin_en.ts src/qt/locale/bitcoin_ru.ts" src/qt/locale/bitcoin_en.ts src/qt/locale/bitcoin_ru.ts src/qt/locale/bitcoin_en.ts src/qt/locale/bitcoin_ru.ts  src/qt/bitcoin.qrc /opt/mxe/usr/i686-w64-mingw32.static/qt5/mkspecs/features/data/dummy.cpp src/qt/bitcoingui.h src/qt/transactiontablemodel.h src/qt/addresstablemodel.h src/qt/optionsdialog.h src/qt/coincontroldialog.h src/qt/coincontroltreewidget.h src/qt/sendcoinsdialog.h src/qt/addressbookpage.h src/qt/signverifymessagedialog.h src/qt/aboutdialog.h src/qt/editaddressdialog.h src/qt/bitcoinaddressvalidator.h src/alert.h src/addrman.h src/base58.h src/bignum.h src/checkpoints.h src/compat.h src/coincontrol.h src/sync.h src/util.h src/uint256.h src/kernel.h src/neoscrypt.h src/scrypt.h src/pbkdf2.h src/serialize.h src/strlcpy.h src/main.h src/miner.h src/net.h src/key.h src/db.h src/txdb.h src/leveldb.h src/walletdb.h src/script.h src/init.h src/irc.h src/mruset.h src/json/json_spirit_writer_template.h src/json/json_spirit_writer.h src/json/json_spirit_value.h src/json/json_spirit_utils.h src/json/json_spirit_stream_reader.h src/json/json_spirit_reader_template.h src/json/json_spirit_reader.h src/json/json_spirit_error_position.h src/json/json_spirit.h src/qt/clientmodel.h src/qt/guiutil.h src/qt/transactionrecord.h src/qt/guiconstants.h src/qt/optionsmodel.h src/qt/monitoreddatamapper.h src/qt/trafficgraphwidget.h src/qt/transactiondesc.h src/qt/transactiondescdialog.h src/qt/bitcoinamountfield.h src/wallet.h src/keystore.h src/qt/transactionfilterproxy.h src/qt/transactionview.h src/qt/walletmodel.h src/bitcoinrpc.h src/qt/overviewpage.h src/qt/csvmodelwriter.h src/crypter.h src/qt/sendcoinsentry.h src/qt/qvalidatedlineedit.h src/qt/bitcoinunits.h src/qt/qvaluecombobox.h src/qt/askpassphrasedialog.h src/protocol.h src/qt/notificator.h src/qt/qtipcserver.h src/allocators.h src/ui_interface.h src/qt/rpcconsole.h src/qt/blockexplorer.h src/version.h src/netbase.h src/clientversion.h  src/qt/bitcoin.cpp src/qt/bitcoingui.cpp src/qt/transactiontablemodel.cpp src/qt/addresstablemodel.cpp src/qt/optionsdialog.cpp src/qt/sendcoinsdialog.cpp src/qt/coincontroldialog.cpp src/qt/coincontroltreewidget.cpp src/qt/addressbookpage.cpp src/qt/signverifymessagedialog.cpp src/qt/aboutdialog.cpp src/qt/editaddressdialog.cpp src/qt/bitcoinaddressvalidator.cpp src/alert.cpp src/version.cpp src/sync.cpp src/util.cpp src/netbase.cpp src/key.cpp src/script.cpp src/main.cpp src/miner.cpp src/init.cpp src/net.cpp src/irc.cpp src/checkpoints.cpp src/addrman.cpp src/db.cpp src/leveldb.cpp src/txdb.cpp src/walletdb.cpp src/qt/clientmodel.cpp src/qt/guiutil.cpp src/qt/transactionrecord.cpp src/qt/optionsmodel.cpp src/qt/monitoreddatamapper.cpp src/qt/trafficgraphwidget.cpp src/qt/transactiondesc.cpp src/qt/transactiondescdialog.cpp src/qt/bitcoinstrings.cpp src/qt/bitcoinamountfield.cpp src/wallet.cpp src/keystore.cpp src/qt/transactionfilterproxy.cpp src/qt/transactionview.cpp src/qt/walletmodel.cpp src/bitcoinrpc.cpp src/rpcdump.cpp src/rpcnet.cpp src/rpcmining.cpp src/rpcwallet.cpp src/rpcblockchain.cpp src/rpcrawtransaction.cpp src/qt/overviewpage.cpp src/qt/csvmodelwriter.cpp src/crypter.cpp src/qt/sendcoinsentry.cpp src/qt/qvalidatedlineedit.cpp src/qt/bitcoinunits.cpp src/qt/qvaluecombobox.cpp src/qt/askpassphrasedialog.cpp src/protocol.cpp src/qt/notificator.cpp src/qt/qtipcserver.cpp src/qt/rpcconsole.cpp src/qt/blockexplorer.cpp src/noui.cpp src/kernel.cpp src/neoscrypt.c src/neoscrypt_asm.S src/scrypt-arm.S src/scrypt-x86.S src/scrypt-x86_64.S src/scrypt.cpp src/pbkdf2.cpp src/qt/forms/coincontroldialog.ui src/qt/forms/sendcoinsdialog.ui src/qt/forms/addressbookpage.ui src/qt/forms/signverifymessagedialog.ui src/qt/forms/aboutdialog.ui src/qt/forms/editaddressdialog.ui src/qt/forms/transactiondescdialog.ui src/qt/forms/overviewpage.ui src/qt/forms/sendcoinsentry.ui src/qt/forms/askpassphrasedialog.ui src/qt/forms/rpcconsole.ui src/qt/forms/blockexplorer.ui src/qt/forms/optionsdialog.ui    
 
 clean: compiler_clean 
 	-$(DEL_FILE) build/bitcoin.o build/bitcoingui.o build/transactiontablemodel.o build/addresstablemodel.o build/optionsdialog.o build/sendcoinsdialog.o build/coincontroldialog.o build/coincontroltreewidget.o build/addressbookpage.o build/signverifymessagedialog.o build/aboutdialog.o build/editaddressdialog.o build/bitcoinaddressvalidator.o build/alert.o build/version.o build/sync.o build/util.o build/netbase.o build/key.o build/script.o build/main.o build/miner.o build/init.o build/net.o build/irc.o build/checkpoints.o build/addrman.o build/db.o build/leveldb.o build/txdb.o build/walletdb.o build/clientmodel.o build/guiutil.o build/transactionrecord.o build/optionsmodel.o build/monitoreddatamapper.o build/trafficgraphwidget.o build/transactiondesc.o build/transactiondescdialog.o build/bitcoinstrings.o build/bitcoinamountfield.o build/wallet.o build/keystore.o build/transactionfilterproxy.o build/transactionview.o build/walletmodel.o build/bitcoinrpc.o build/rpcdump.o build/rpcnet.o build/rpcmining.o build/rpcwallet.o build/rpcblockchain.o build/rpcrawtransaction.o build/overviewpage.o build/csvmodelwriter.o build/crypter.o build/sendcoinsentry.o build/qvalidatedlineedit.o build/bitcoinunits.o build/qvaluecombobox.o build/askpassphrasedialog.o build/protocol.o build/notificator.o build/qtipcserver.o build/rpcconsole.o build/blockexplorer.o build/noui.o build/kernel.o build/neoscrypt.o build/neoscrypt_asm.o build/scrypt-arm.o build/scrypt-x86.o build/scrypt-x86_64.o build/scrypt.o build/pbkdf2.o build/swisscoin-classic-qt_plugin_import.o build/qrc_bitcoin.o build/moc_bitcoingui.o build/moc_transactiontablemodel.o build/moc_addresstablemodel.o build/moc_optionsdialog.o build/moc_coincontroldialog.o build/moc_coincontroltreewidget.o build/moc_sendcoinsdialog.o build/moc_addressbookpage.o build/moc_signverifymessagedialog.o build/moc_aboutdialog.o build/moc_editaddressdialog.o build/moc_bitcoinaddressvalidator.o build/moc_clientmodel.o build/moc_guiutil.o build/moc_optionsmodel.o build/moc_monitoreddatamapper.o
@@ -4292,13 +4294,59 @@ build/overviewpage.moc: src/qt/overviewpage.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_overviewpage.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFormLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qformlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QListView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlistview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
 		src/qt/walletmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
 		src/allocators.h \
 		src/qt/bitcoinunits.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QString \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		src/qt/optionsmodel.h \
 		src/qt/transactiontablemodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractTableModel \
@@ -4315,19 +4363,6 @@ build/overviewpage.moc: src/qt/overviewpage.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialog.h \
 		src/qt/guiconstants.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAbstractItemDelegate \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QPainter \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpainter.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
@@ -4443,6 +4478,69 @@ build/rpcconsole.moc: src/qt/rpcconsole.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_rpcconsole.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QCheckBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qcheckbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QGridLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSlider \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTabWidget \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTextEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtextedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextdocument.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
+		src/qt/trafficgraphwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QQueue \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qqueue.h \
 		src/qt/clientmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
 		src/qt/guiutil.h \
@@ -4483,19 +4581,9 @@ build/rpcconsole.moc: src/qt/rpcconsole.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qbasictimer.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QThread \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qthread.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTextEdit \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtextedit.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextdocument.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QKeyEvent \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QScrollBar \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qscrollbar.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QUrl \
 		src/qt/rpcconsole.cpp \
 		build/moc_predefs.h \
@@ -6249,10 +6337,68 @@ build/optionsdialog.o: src/qt/optionsdialog.cpp src/qt/optionsdialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_optionsdialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QCheckBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qcheckbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTabWidget \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
+		src/qt/bitcoinamountfield.h \
+		src/qt/qvalidatedlineedit.h \
+		src/qt/qvaluecombobox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QComboBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qcombobox.h \
 		src/qt/bitcoinunits.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QString \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		src/qt/monitoreddatamapper.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDataWidgetMapper \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdatawidgetmapper.h \
@@ -6267,8 +6413,6 @@ build/optionsdialog.o: src/qt/optionsdialog.cpp src/qt/optionsdialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qdir.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qfileinfo.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QIntValidator \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QLocale \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QMessageBox \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qmessagebox.h \
@@ -6383,6 +6527,66 @@ build/sendcoinsdialog.o: src/qt/sendcoinsdialog.cpp src/qt/sendcoinsdialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QString \
 		build/ui_sendcoinsdialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QCheckBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qcheckbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFormLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qformlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QScrollArea \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
+		src/qt/qvalidatedlineedit.h \
 		src/init.h \
 		src/wallet.h \
 		src/main.h \
@@ -6413,15 +6617,12 @@ build/sendcoinsdialog.o: src/qt/sendcoinsdialog.cpp src/qt/sendcoinsdialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
 		src/qt/addresstablemodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractTableModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QStringList \
 		src/qt/addressbookpage.h \
 		src/qt/bitcoinunits.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
 		src/qt/optionsmodel.h \
 		src/qt/sendcoinsentry.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
 		src/qt/guiutil.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QMessageBox \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qmessagebox.h \
@@ -6429,11 +6630,6 @@ build/sendcoinsdialog.o: src/qt/sendcoinsdialog.cpp src/qt/sendcoinsdialog.h \
 		src/coincontrol.h \
 		src/qt/coincontroldialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAbstractButton \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QList \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QMenu \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qmenu.h \
@@ -6441,20 +6637,6 @@ build/sendcoinsdialog.o: src/qt/sendcoinsdialog.cpp src/qt/sendcoinsdialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTreeWidgetItem \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtreewidget.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtreeview.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtreewidgetitemiterator.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QLocale \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QTextDocument \
@@ -6602,6 +6784,41 @@ build/coincontroldialog.o: src/qt/coincontroldialog.cpp src/qt/coincontroldialog
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtreewidgetitemiterator.h \
 		build/ui_coincontroldialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialogButtonBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialogbuttonbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFormLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qformlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QRadioButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qradiobutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
+		src/qt/coincontroltreewidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QKeyEvent \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTreeWidget \
 		src/init.h \
 		src/wallet.h \
 		src/main.h \
@@ -6637,13 +6854,6 @@ build/coincontroldialog.o: src/qt/coincontroldialog.cpp src/qt/coincontroldialog
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QStringList \
 		src/qt/optionsmodel.h \
 		src/coincontrol.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QCheckBox \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qcheckbox.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QClipboard \
@@ -6652,11 +6862,8 @@ build/coincontroldialog.o: src/qt/coincontroldialog.cpp src/qt/coincontroldialog
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QCursor \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QDateTime \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qdatetime.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialogButtonBox \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialogbuttonbox.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QFlags \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QIcon \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTreeWidget
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QIcon
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/coincontroldialog.o src/qt/coincontroldialog.cpp
 
 build/coincontroltreewidget.o: src/qt/coincontroltreewidget.cpp src/qt/coincontroltreewidget.h \
@@ -6906,17 +7113,63 @@ build/addressbookpage.o: src/qt/addressbookpage.cpp src/qt/addressbookpage.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_addressbookpage.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialogButtonBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialogbuttonbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTableView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtableview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
 		src/qt/addresstablemodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractTableModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QStringList \
 		src/qt/optionsmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
 		src/qt/bitcoingui.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QMainWindow \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qmainwindow.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSystemTrayIcon \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qsystemtrayicon.h \
 		src/qt/editaddressdialog.h \
@@ -6934,8 +7187,6 @@ build/addressbookpage.o: src/qt/addressbookpage.cpp src/qt/addressbookpage.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qclipboard.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QMenu \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qmenu.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
 		src/qt/qrcodedialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QImage
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/addressbookpage.o src/qt/addressbookpage.cpp
@@ -7046,6 +7297,68 @@ build/signverifymessagedialog.o: src/qt/signverifymessagedialog.cpp src/qt/signv
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_signverifymessagedialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPlainTextEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qplaintextedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtextedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextdocument.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qabstracttextdocumentlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qglyphrun.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qrawfont.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qfontdatabase.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTabWidget \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
+		src/qt/qvalidatedlineedit.h \
 		src/qt/addressbookpage.h \
 		src/base58.h \
 		src/bignum.h \
@@ -7080,7 +7393,6 @@ build/signverifymessagedialog.o: src/qt/signverifymessagedialog.cpp src/qt/signv
 		src/db.h \
 		src/qt/optionsmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		src/qt/walletmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QClipboard \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qclipboard.h
@@ -7192,6 +7504,49 @@ build/aboutdialog.o: src/qt/aboutdialog.cpp src/qt/aboutdialog.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_aboutdialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialogButtonBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialogbuttonbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
 		src/qt/clientmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
 		src/version.h \
@@ -7304,9 +7659,58 @@ build/editaddressdialog.o: src/qt/editaddressdialog.cpp src/qt/editaddressdialog
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_editaddressdialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialogButtonBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialogbuttonbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFormLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qformlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
 		src/qt/addresstablemodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractTableModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QStringList \
 		src/qt/guiutil.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QString \
@@ -8812,9 +9216,54 @@ build/transactiondescdialog.o: src/qt/transactiondescdialog.cpp src/qt/transacti
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_transactiondescdialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialogButtonBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialogbuttonbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTextEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtextedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextdocument.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
 		src/qt/transactiontablemodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractTableModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QStringList \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QModelIndex
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/transactiondescdialog.o src/qt/transactiondescdialog.cpp
@@ -9778,13 +10227,59 @@ build/overviewpage.o: src/qt/overviewpage.cpp src/qt/overviewpage.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_overviewpage.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFormLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qformlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QListView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlistview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
 		src/qt/walletmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
 		src/allocators.h \
 		src/qt/bitcoinunits.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QString \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		src/qt/optionsmodel.h \
 		src/qt/transactiontablemodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractTableModel \
@@ -9801,19 +10296,6 @@ build/overviewpage.o: src/qt/overviewpage.cpp src/qt/overviewpage.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialog.h \
 		src/qt/guiconstants.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAbstractItemDelegate \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QPainter \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpainter.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
@@ -10034,6 +10516,57 @@ build/sendcoinsentry.o: src/qt/sendcoinsentry.cpp src/qt/sendcoinsentry.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_sendcoinsentry.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QGridLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QToolButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtoolbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		src/qt/bitcoinamountfield.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
+		src/qt/qvalidatedlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
 		src/qt/guiutil.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QString \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
@@ -10042,7 +10575,6 @@ build/sendcoinsentry.o: src/qt/sendcoinsentry.cpp src/qt/sendcoinsentry.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialog.h \
 		src/qt/bitcoinunits.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractListModel \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
 		src/qt/addressbookpage.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialog \
 		src/qt/walletmodel.h \
@@ -10051,13 +10583,6 @@ build/sendcoinsentry.o: src/qt/sendcoinsentry.cpp src/qt/sendcoinsentry.h \
 		src/qt/addresstablemodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QAbstractTableModel \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QStringList \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QClipboard \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qclipboard.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/sendcoinsentry.o src/qt/sendcoinsentry.cpp
@@ -10473,6 +10998,59 @@ build/askpassphrasedialog.o: src/qt/askpassphrasedialog.cpp src/qt/askpassphrase
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_askpassphrasedialog.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QCheckBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qcheckbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QDialogButtonBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdialogbuttonbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFormLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qformlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
 		src/qt/guiconstants.h \
 		src/qt/walletmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
@@ -10488,8 +11066,6 @@ build/askpassphrasedialog.o: src/qt/askpassphrasedialog.cpp src/qt/askpassphrase
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qmessagebox.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/askpassphrasedialog.o src/qt/askpassphrasedialog.cpp
 
@@ -10759,6 +11335,69 @@ build/rpcconsole.o: src/qt/rpcconsole.cpp src/qt/rpcconsole.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_rpcconsole.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QCheckBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qcheckbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QFrame \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QGridLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSlider \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpacerItem \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTabWidget \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTextEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtextedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextdocument.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QVBoxLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
+		src/qt/trafficgraphwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QQueue \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qqueue.h \
 		src/qt/clientmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
 		src/qt/guiutil.h \
@@ -10799,19 +11438,9 @@ build/rpcconsole.o: src/qt/rpcconsole.cpp src/qt/rpcconsole.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qbasictimer.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QThread \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qthread.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QTextEdit \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtextedit.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextdocument.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/QKeyEvent \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QScrollBar \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qscrollbar.h \
-		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QUrl \
 		build/rpcconsole.moc
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/rpcconsole.o src/qt/rpcconsole.cpp
@@ -10922,6 +11551,59 @@ build/blockexplorer.o: src/qt/blockexplorer.cpp src/qt/blockexplorer.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvector2d.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtouchdevice.h \
 		build/ui_blockexplorer.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QVariant \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QAction \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qaction.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qicon.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qactiongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QApplication \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qcoreapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qeventloop.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qdesktopwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qguiapplication.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qinputmethod.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QButtonGroup \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qbuttongroup.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QGridLayout \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qgridlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlayoutitem.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qboxlayout.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QHeaderView \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qheaderview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemview.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qframe.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qabstractitemmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qitemselectionmodel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractitemdelegate.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyleoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qvalidator.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/qregularexpression.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractslider.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qstyle.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabbar.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qtabwidget.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qrubberband.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLabel \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlabel.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QLineEdit \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qlineedit.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextcursor.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextformat.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qpen.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtGui/qtextoption.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QPushButton \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qpushbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qabstractbutton.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QScrollArea \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qscrollarea.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QSpinBox \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/qspinbox.h \
+		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtWidgets/QWidget \
 		src/qt/clientmodel.h \
 		/opt/mxe/usr/i686-w64-mingw32.static/qt5/include/QtCore/QObject \
 		src/base58.h \
