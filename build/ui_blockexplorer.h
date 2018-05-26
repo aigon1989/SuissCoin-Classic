@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'blockexplorer.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.7
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,18 +10,18 @@
 #define UI_BLOCKEXPLORER_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QDialog>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QScrollArea>
-#include <QtGui/QSpinBox>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QSpinBox>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -66,7 +66,7 @@ public:
     void setupUi(QDialog *BlockExplorer)
     {
         if (BlockExplorer->objectName().isEmpty())
-            BlockExplorer->setObjectName(QString::fromUtf8("BlockExplorer"));
+            BlockExplorer->setObjectName(QStringLiteral("BlockExplorer"));
         BlockExplorer->setWindowModality(Qt::NonModal);
         BlockExplorer->setEnabled(true);
         BlockExplorer->resize(760, 470);
@@ -78,26 +78,26 @@ public:
         BlockExplorer->setMinimumSize(QSize(0, 0));
         BlockExplorer->setAcceptDrops(false);
         gridLayout = new QGridLayout(BlockExplorer);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
         gridLayout->setSizeConstraint(QLayout::SetMaximumSize);
         gridLayout->setContentsMargins(10, 10, 10, 5);
         scrollArea = new QScrollArea(BlockExplorer);
-        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        scrollArea->setObjectName(QStringLiteral("scrollArea"));
         scrollArea->setWidgetResizable(true);
         blockWidget = new QWidget();
-        blockWidget->setObjectName(QString::fromUtf8("blockWidget"));
+        blockWidget->setObjectName(QStringLiteral("blockWidget"));
         blockWidget->setGeometry(QRect(0, 0, 738, 453));
         blockGrid = new QGridLayout(blockWidget);
         blockGrid->setSpacing(8);
-        blockGrid->setObjectName(QString::fromUtf8("blockGrid"));
+        blockGrid->setObjectName(QStringLiteral("blockGrid"));
         blockGrid->setContentsMargins(4, 4, 4, 4);
         hashText = new QLabel(blockWidget);
-        hashText->setObjectName(QString::fromUtf8("hashText"));
+        hashText->setObjectName(QStringLiteral("hashText"));
 
         blockGrid->addWidget(hashText, 3, 0, 1, 1);
 
         merkleData = new QLabel(blockWidget);
-        merkleData->setObjectName(QString::fromUtf8("merkleData"));
+        merkleData->setObjectName(QStringLiteral("merkleData"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -108,7 +108,7 @@ public:
         blockGrid->addWidget(merkleData, 4, 1, 1, 1);
 
         baseData = new QLabel(blockWidget);
-        baseData->setObjectName(QString::fromUtf8("baseData"));
+        baseData->setObjectName(QStringLiteral("baseData"));
         sizePolicy1.setHeightForWidth(baseData->sizePolicy().hasHeightForWidth());
         baseData->setSizePolicy(sizePolicy1);
         baseData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
@@ -116,7 +116,7 @@ public:
         blockGrid->addWidget(baseData, 5, 1, 1, 1);
 
         numberBox = new QSpinBox(blockWidget);
-        numberBox->setObjectName(QString::fromUtf8("numberBox"));
+        numberBox->setObjectName(QStringLiteral("numberBox"));
         QSizePolicy sizePolicy2(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -128,13 +128,13 @@ public:
         blockGrid->addWidget(numberBox, 1, 1, 1, 1);
 
         blockTimeData = new QLabel(blockWidget);
-        blockTimeData->setObjectName(QString::fromUtf8("blockTimeData"));
+        blockTimeData->setObjectName(QStringLiteral("blockTimeData"));
         blockTimeData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(blockTimeData, 2, 1, 1, 1);
 
         blockButton = new QPushButton(blockWidget);
-        blockButton->setObjectName(QString::fromUtf8("blockButton"));
+        blockButton->setObjectName(QStringLiteral("blockButton"));
         QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
@@ -145,17 +145,17 @@ public:
         blockGrid->addWidget(blockButton, 1, 0, 1, 1);
 
         diffText = new QLabel(blockWidget);
-        diffText->setObjectName(QString::fromUtf8("diffText"));
+        diffText->setObjectName(QStringLiteral("diffText"));
 
         blockGrid->addWidget(diffText, 6, 0, 1, 1);
 
         blockTimeText = new QLabel(blockWidget);
-        blockTimeText->setObjectName(QString::fromUtf8("blockTimeText"));
+        blockTimeText->setObjectName(QStringLiteral("blockTimeText"));
 
         blockGrid->addWidget(blockTimeText, 2, 0, 1, 1);
 
         hashData = new QLabel(blockWidget);
-        hashData->setObjectName(QString::fromUtf8("hashData"));
+        hashData->setObjectName(QStringLiteral("hashData"));
         hashData->setEnabled(true);
         sizePolicy1.setHeightForWidth(hashData->sizePolicy().hasHeightForWidth());
         hashData->setSizePolicy(sizePolicy1);
@@ -164,105 +164,105 @@ public:
         blockGrid->addWidget(hashData, 3, 1, 1, 1);
 
         merkleText = new QLabel(blockWidget);
-        merkleText->setObjectName(QString::fromUtf8("merkleText"));
+        merkleText->setObjectName(QStringLiteral("merkleText"));
 
         blockGrid->addWidget(merkleText, 4, 0, 1, 1);
 
         valueData = new QLabel(blockWidget);
-        valueData->setObjectName(QString::fromUtf8("valueData"));
+        valueData->setObjectName(QStringLiteral("valueData"));
         valueData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(valueData, 13, 1, 1, 1);
 
         txTimeText = new QLabel(blockWidget);
-        txTimeText->setObjectName(QString::fromUtf8("txTimeText"));
+        txTimeText->setObjectName(QStringLiteral("txTimeText"));
 
         blockGrid->addWidget(txTimeText, 12, 0, 1, 1);
 
         outputData = new QLabel(blockWidget);
-        outputData->setObjectName(QString::fromUtf8("outputData"));
+        outputData->setObjectName(QStringLiteral("outputData"));
         outputData->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         outputData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(outputData, 16, 1, 1, 1);
 
         coinSupplyData = new QLabel(blockWidget);
-        coinSupplyData->setObjectName(QString::fromUtf8("coinSupplyData"));
+        coinSupplyData->setObjectName(QStringLiteral("coinSupplyData"));
         coinSupplyData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(coinSupplyData, 7, 1, 1, 1);
 
         baseText = new QLabel(blockWidget);
-        baseText->setObjectName(QString::fromUtf8("baseText"));
+        baseText->setObjectName(QStringLiteral("baseText"));
 
         blockGrid->addWidget(baseText, 5, 0, 1, 1);
 
         feeData = new QLabel(blockWidget);
-        feeData->setObjectName(QString::fromUtf8("feeData"));
+        feeData->setObjectName(QStringLiteral("feeData"));
         feeData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(feeData, 14, 1, 1, 1);
 
         coinSupplyText = new QLabel(blockWidget);
-        coinSupplyText->setObjectName(QString::fromUtf8("coinSupplyText"));
+        coinSupplyText->setObjectName(QStringLiteral("coinSupplyText"));
 
         blockGrid->addWidget(coinSupplyText, 7, 0, 1, 1);
 
         blockTxText = new QLabel(blockWidget);
-        blockTxText->setObjectName(QString::fromUtf8("blockTxText"));
+        blockTxText->setObjectName(QStringLiteral("blockTxText"));
         blockTxText->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         blockGrid->addWidget(blockTxText, 8, 0, 1, 1);
 
         feeText = new QLabel(blockWidget);
-        feeText->setObjectName(QString::fromUtf8("feeText"));
+        feeText->setObjectName(QStringLiteral("feeText"));
 
         blockGrid->addWidget(feeText, 14, 0, 1, 1);
 
         diffData = new QLabel(blockWidget);
-        diffData->setObjectName(QString::fromUtf8("diffData"));
+        diffData->setObjectName(QStringLiteral("diffData"));
         diffData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(diffData, 6, 1, 1, 1);
 
         inputData = new QLabel(blockWidget);
-        inputData->setObjectName(QString::fromUtf8("inputData"));
+        inputData->setObjectName(QStringLiteral("inputData"));
         inputData->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         inputData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(inputData, 15, 1, 1, 1);
 
         inputText = new QLabel(blockWidget);
-        inputText->setObjectName(QString::fromUtf8("inputText"));
+        inputText->setObjectName(QStringLiteral("inputText"));
         inputText->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         blockGrid->addWidget(inputText, 15, 0, 1, 1);
 
         txTimeData = new QLabel(blockWidget);
-        txTimeData->setObjectName(QString::fromUtf8("txTimeData"));
+        txTimeData->setObjectName(QStringLiteral("txTimeData"));
         txTimeData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(txTimeData, 12, 1, 1, 1);
 
         blockTxData = new QLabel(blockWidget);
-        blockTxData->setObjectName(QString::fromUtf8("blockTxData"));
+        blockTxData->setObjectName(QStringLiteral("blockTxData"));
         blockTxData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(blockTxData, 8, 1, 1, 1);
 
         valueText = new QLabel(blockWidget);
-        valueText->setObjectName(QString::fromUtf8("valueText"));
+        valueText->setObjectName(QStringLiteral("valueText"));
 
         blockGrid->addWidget(valueText, 13, 0, 1, 1);
 
         txData = new QLabel(blockWidget);
-        txData->setObjectName(QString::fromUtf8("txData"));
+        txData->setObjectName(QStringLiteral("txData"));
         txData->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse);
 
         blockGrid->addWidget(txData, 11, 1, 1, 1);
 
         txLine = new QLineEdit(blockWidget);
-        txLine->setObjectName(QString::fromUtf8("txLine"));
+        txLine->setObjectName(QStringLiteral("txLine"));
         QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy4.setHorizontalStretch(0);
         sizePolicy4.setVerticalStretch(0);
@@ -272,7 +272,7 @@ public:
         blockGrid->addWidget(txLine, 10, 1, 1, 1);
 
         txButton = new QPushButton(blockWidget);
-        txButton->setObjectName(QString::fromUtf8("txButton"));
+        txButton->setObjectName(QStringLiteral("txButton"));
         sizePolicy3.setHeightForWidth(txButton->sizePolicy().hasHeightForWidth());
         txButton->setSizePolicy(sizePolicy3);
         txButton->setMinimumSize(QSize(180, 26));
@@ -280,13 +280,13 @@ public:
         blockGrid->addWidget(txButton, 10, 0, 1, 1);
 
         outputText = new QLabel(blockWidget);
-        outputText->setObjectName(QString::fromUtf8("outputText"));
+        outputText->setObjectName(QStringLiteral("outputText"));
         outputText->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
 
         blockGrid->addWidget(outputText, 16, 0, 1, 1);
 
         txText = new QLabel(blockWidget);
-        txText->setObjectName(QString::fromUtf8("txText"));
+        txText->setObjectName(QStringLiteral("txText"));
 
         blockGrid->addWidget(txText, 11, 0, 1, 1);
 
@@ -302,35 +302,35 @@ public:
 
     void retranslateUi(QDialog *BlockExplorer)
     {
-        BlockExplorer->setWindowTitle(QApplication::translate("BlockExplorer", "Block Explorer", 0, QApplication::UnicodeUTF8));
-        hashText->setText(QApplication::translate("BlockExplorer", "Hash:", 0, QApplication::UnicodeUTF8));
-        merkleData->setText(QApplication::translate("BlockExplorer", "0x0", 0, QApplication::UnicodeUTF8));
-        baseData->setText(QApplication::translate("BlockExplorer", "0x0", 0, QApplication::UnicodeUTF8));
-        blockButton->setText(QApplication::translate("BlockExplorer", "Decode block", 0, QApplication::UnicodeUTF8));
-        diffText->setText(QApplication::translate("BlockExplorer", "Difficulty, target, nonce:", 0, QApplication::UnicodeUTF8));
-        blockTimeText->setText(QApplication::translate("BlockExplorer", "General data:", 0, QApplication::UnicodeUTF8));
-        hashData->setText(QApplication::translate("BlockExplorer", "0x0", 0, QApplication::UnicodeUTF8));
-        merkleText->setText(QApplication::translate("BlockExplorer", "Merkle root:", 0, QApplication::UnicodeUTF8));
-        valueData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", 0, QApplication::UnicodeUTF8));
-        txTimeText->setText(QApplication::translate("BlockExplorer", "General data:", 0, QApplication::UnicodeUTF8));
-        outputData->setText(QApplication::translate("BlockExplorer", "N/A", 0, QApplication::UnicodeUTF8));
-        coinSupplyData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", 0, QApplication::UnicodeUTF8));
-        baseText->setText(QApplication::translate("BlockExplorer", "Coin base:", 0, QApplication::UnicodeUTF8));
-        feeData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", 0, QApplication::UnicodeUTF8));
-        coinSupplyText->setText(QApplication::translate("BlockExplorer", "Coin supply:", 0, QApplication::UnicodeUTF8));
-        blockTxText->setText(QApplication::translate("BlockExplorer", "Payments:", 0, QApplication::UnicodeUTF8));
-        feeText->setText(QApplication::translate("BlockExplorer", "Fee paid:", 0, QApplication::UnicodeUTF8));
-        diffData->setText(QApplication::translate("BlockExplorer", "0.00 0x0 0x0", 0, QApplication::UnicodeUTF8));
-        inputData->setText(QApplication::translate("BlockExplorer", "N/A", 0, QApplication::UnicodeUTF8));
-        inputText->setText(QApplication::translate("BlockExplorer", "Inputs:", 0, QApplication::UnicodeUTF8));
+        BlockExplorer->setWindowTitle(QApplication::translate("BlockExplorer", "Block Explorer", nullptr));
+        hashText->setText(QApplication::translate("BlockExplorer", "Hash:", nullptr));
+        merkleData->setText(QApplication::translate("BlockExplorer", "0x0", nullptr));
+        baseData->setText(QApplication::translate("BlockExplorer", "0x0", nullptr));
+        blockButton->setText(QApplication::translate("BlockExplorer", "Decode block", nullptr));
+        diffText->setText(QApplication::translate("BlockExplorer", "Difficulty, target, nonce:", nullptr));
+        blockTimeText->setText(QApplication::translate("BlockExplorer", "General data:", nullptr));
+        hashData->setText(QApplication::translate("BlockExplorer", "0x0", nullptr));
+        merkleText->setText(QApplication::translate("BlockExplorer", "Merkle root:", nullptr));
+        valueData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", nullptr));
+        txTimeText->setText(QApplication::translate("BlockExplorer", "General data:", nullptr));
+        outputData->setText(QApplication::translate("BlockExplorer", "N/A", nullptr));
+        coinSupplyData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", nullptr));
+        baseText->setText(QApplication::translate("BlockExplorer", "Coin base:", nullptr));
+        feeData->setText(QApplication::translate("BlockExplorer", "0.00 SICC", nullptr));
+        coinSupplyText->setText(QApplication::translate("BlockExplorer", "Coin supply:", nullptr));
+        blockTxText->setText(QApplication::translate("BlockExplorer", "Payments:", nullptr));
+        feeText->setText(QApplication::translate("BlockExplorer", "Fee paid:", nullptr));
+        diffData->setText(QApplication::translate("BlockExplorer", "0.00 0x0 0x0", nullptr));
+        inputData->setText(QApplication::translate("BlockExplorer", "N/A", nullptr));
+        inputText->setText(QApplication::translate("BlockExplorer", "Inputs:", nullptr));
         txTimeData->setText(QString());
-        blockTxData->setText(QApplication::translate("BlockExplorer", "N/A", 0, QApplication::UnicodeUTF8));
-        valueText->setText(QApplication::translate("BlockExplorer", "Value:", 0, QApplication::UnicodeUTF8));
-        txData->setText(QApplication::translate("BlockExplorer", "N/A", 0, QApplication::UnicodeUTF8));
+        blockTxData->setText(QApplication::translate("BlockExplorer", "N/A", nullptr));
+        valueText->setText(QApplication::translate("BlockExplorer", "Value:", nullptr));
+        txData->setText(QApplication::translate("BlockExplorer", "N/A", nullptr));
         txLine->setInputMask(QString());
-        txButton->setText(QApplication::translate("BlockExplorer", "Decode payment", 0, QApplication::UnicodeUTF8));
-        outputText->setText(QApplication::translate("BlockExplorer", "Outputs:", 0, QApplication::UnicodeUTF8));
-        txText->setText(QApplication::translate("BlockExplorer", "Payment ID:", 0, QApplication::UnicodeUTF8));
+        txButton->setText(QApplication::translate("BlockExplorer", "Decode payment", nullptr));
+        outputText->setText(QApplication::translate("BlockExplorer", "Outputs:", nullptr));
+        txText->setText(QApplication::translate("BlockExplorer", "Payment ID:", nullptr));
     } // retranslateUi
 
 };

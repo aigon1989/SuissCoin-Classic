@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'overviewpage.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.7
+** Created by: Qt User Interface Compiler version 5.10.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,18 +10,18 @@
 #define UI_OVERVIEWPAGE_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QFormLayout>
-#include <QtGui/QFrame>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QListView>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QWidget>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QFormLayout>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QListView>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -61,84 +61,84 @@ public:
     void setupUi(QWidget *OverviewPage)
     {
         if (OverviewPage->objectName().isEmpty())
-            OverviewPage->setObjectName(QString::fromUtf8("OverviewPage"));
+            OverviewPage->setObjectName(QStringLiteral("OverviewPage"));
         OverviewPage->resize(850, 475);
         horizontalLayout = new QHBoxLayout(OverviewPage);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         frame = new QFrame(OverviewPage);
-        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setObjectName(QStringLiteral("frame"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         verticalLayout_4 = new QVBoxLayout(frame);
-        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
         formLayout_2 = new QFormLayout();
-        formLayout_2->setObjectName(QString::fromUtf8("formLayout_2"));
+        formLayout_2->setObjectName(QStringLiteral("formLayout_2"));
         formLayout_2->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         formLayout_2->setHorizontalSpacing(12);
         formLayout_2->setVerticalSpacing(12);
         formLayout_2->setContentsMargins(-1, 3, -1, 3);
         label = new QLabel(frame);
-        label->setObjectName(QString::fromUtf8("label"));
+        label->setObjectName(QStringLiteral("label"));
 
         formLayout_2->setWidget(0, QFormLayout::LabelRole, label);
 
         labelBalance = new QLabel(frame);
-        labelBalance->setObjectName(QString::fromUtf8("labelBalance"));
+        labelBalance->setObjectName(QStringLiteral("labelBalance"));
         QFont font;
         font.setBold(true);
         font.setWeight(75);
         labelBalance->setFont(font);
         labelBalance->setCursor(QCursor(Qt::IBeamCursor));
-        labelBalance->setText(QString::fromUtf8("0 SICC"));
+        labelBalance->setText(QStringLiteral("0 SICC"));
         labelBalance->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(0, QFormLayout::FieldRole, labelBalance);
 
         labelStakeText = new QLabel(frame);
-        labelStakeText->setObjectName(QString::fromUtf8("labelStakeText"));
+        labelStakeText->setObjectName(QStringLiteral("labelStakeText"));
 
         formLayout_2->setWidget(1, QFormLayout::LabelRole, labelStakeText);
 
         labelStake = new QLabel(frame);
-        labelStake->setObjectName(QString::fromUtf8("labelStake"));
+        labelStake->setObjectName(QStringLiteral("labelStake"));
         labelStake->setFont(font);
         labelStake->setCursor(QCursor(Qt::IBeamCursor));
-        labelStake->setText(QString::fromUtf8("0 SICC"));
+        labelStake->setText(QStringLiteral("0 SICC"));
         labelStake->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(1, QFormLayout::FieldRole, labelStake);
 
         labelUnconfirmedText = new QLabel(frame);
-        labelUnconfirmedText->setObjectName(QString::fromUtf8("labelUnconfirmedText"));
+        labelUnconfirmedText->setObjectName(QStringLiteral("labelUnconfirmedText"));
 
         formLayout_2->setWidget(2, QFormLayout::LabelRole, labelUnconfirmedText);
 
         labelUnconfirmed = new QLabel(frame);
-        labelUnconfirmed->setObjectName(QString::fromUtf8("labelUnconfirmed"));
+        labelUnconfirmed->setObjectName(QStringLiteral("labelUnconfirmed"));
         labelUnconfirmed->setFont(font);
         labelUnconfirmed->setCursor(QCursor(Qt::IBeamCursor));
-        labelUnconfirmed->setText(QString::fromUtf8("0 SICC"));
+        labelUnconfirmed->setText(QStringLiteral("0 SICC"));
         labelUnconfirmed->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(2, QFormLayout::FieldRole, labelUnconfirmed);
 
         labelImmatureText = new QLabel(frame);
-        labelImmatureText->setObjectName(QString::fromUtf8("labelImmatureText"));
+        labelImmatureText->setObjectName(QStringLiteral("labelImmatureText"));
 
         formLayout_2->setWidget(3, QFormLayout::LabelRole, labelImmatureText);
 
         labelImmature = new QLabel(frame);
-        labelImmature->setObjectName(QString::fromUtf8("labelImmature"));
+        labelImmature->setObjectName(QStringLiteral("labelImmature"));
         labelImmature->setFont(font);
-        labelImmature->setText(QString::fromUtf8("0 SICC"));
+        labelImmature->setText(QStringLiteral("0 SICC"));
         labelImmature->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(3, QFormLayout::FieldRole, labelImmature);
 
         line = new QFrame(frame);
-        line->setObjectName(QString::fromUtf8("line"));
+        line->setObjectName(QStringLiteral("line"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -151,26 +151,26 @@ public:
         formLayout_2->setWidget(4, QFormLayout::SpanningRole, line);
 
         labelConsolidatedText = new QLabel(frame);
-        labelConsolidatedText->setObjectName(QString::fromUtf8("labelConsolidatedText"));
+        labelConsolidatedText->setObjectName(QStringLiteral("labelConsolidatedText"));
 
         formLayout_2->setWidget(5, QFormLayout::LabelRole, labelConsolidatedText);
 
         labelConsolidated = new QLabel(frame);
-        labelConsolidated->setObjectName(QString::fromUtf8("labelConsolidated"));
+        labelConsolidated->setObjectName(QStringLiteral("labelConsolidated"));
         labelConsolidated->setFont(font);
-        labelConsolidated->setText(QString::fromUtf8("0 SICC"));
+        labelConsolidated->setText(QStringLiteral("0 SICC"));
         labelConsolidated->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
         formLayout_2->setWidget(5, QFormLayout::FieldRole, labelConsolidated);
 
         label_2 = new QLabel(frame);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setObjectName(QStringLiteral("label_2"));
 
         formLayout_2->setWidget(6, QFormLayout::LabelRole, label_2);
 
         labelNumTransactions = new QLabel(frame);
-        labelNumTransactions->setObjectName(QString::fromUtf8("labelNumTransactions"));
-        labelNumTransactions->setText(QString::fromUtf8("0"));
+        labelNumTransactions->setObjectName(QStringLiteral("labelNumTransactions"));
+        labelNumTransactions->setText(QStringLiteral("0"));
 
         formLayout_2->setWidget(6, QFormLayout::FieldRole, labelNumTransactions);
 
@@ -181,7 +181,7 @@ public:
         verticalLayout_2->addWidget(frame);
 
         trzlogo = new QLabel(OverviewPage);
-        trzlogo->setObjectName(QString::fromUtf8("trzlogo"));
+        trzlogo->setObjectName(QStringLiteral("trzlogo"));
         trzlogo->setPixmap(QPixmap(QString::fromUtf8(":/icons/suisscoin")));
         trzlogo->setScaledContents(false);
         trzlogo->setAlignment(Qt::AlignCenter);
@@ -197,24 +197,24 @@ public:
         horizontalLayout->addLayout(verticalLayout_2);
 
         verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         frame_2 = new QFrame(OverviewPage);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setObjectName(QStringLiteral("frame_2"));
         frame_2->setFrameShape(QFrame::StyledPanel);
         frame_2->setFrameShadow(QFrame::Raised);
         verticalLayout = new QVBoxLayout(frame_2);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         label_4 = new QLabel(frame_2);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setObjectName(QStringLiteral("label_4"));
 
         horizontalLayout_2->addWidget(label_4);
 
         labelTransactionsStatus = new QLabel(frame_2);
-        labelTransactionsStatus->setObjectName(QString::fromUtf8("labelTransactionsStatus"));
-        labelTransactionsStatus->setStyleSheet(QString::fromUtf8("QLabel { color: red; }"));
-        labelTransactionsStatus->setText(QString::fromUtf8("(out of sync)"));
+        labelTransactionsStatus->setObjectName(QStringLiteral("labelTransactionsStatus"));
+        labelTransactionsStatus->setStyleSheet(QStringLiteral("QLabel { color: red; }"));
+        labelTransactionsStatus->setText(QStringLiteral("(out of sync)"));
         labelTransactionsStatus->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(labelTransactionsStatus);
@@ -227,8 +227,8 @@ public:
         verticalLayout->addLayout(horizontalLayout_2);
 
         listTransactions = new QListView(frame_2);
-        listTransactions->setObjectName(QString::fromUtf8("listTransactions"));
-        listTransactions->setStyleSheet(QString::fromUtf8("QListView { background: transparent; }"));
+        listTransactions->setObjectName(QStringLiteral("listTransactions"));
+        listTransactions->setStyleSheet(QStringLiteral("QListView { background: transparent; }"));
         listTransactions->setFrameShape(QFrame::NoFrame);
         listTransactions->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         listTransactions->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -256,35 +256,35 @@ public:
 
     void retranslateUi(QWidget *OverviewPage)
     {
-        OverviewPage->setWindowTitle(QApplication::translate("OverviewPage", "Form", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("OverviewPage", "Balance:", 0, QApplication::UnicodeUTF8));
+        OverviewPage->setWindowTitle(QApplication::translate("OverviewPage", "Form", nullptr));
+        label->setText(QApplication::translate("OverviewPage", "Balance:", nullptr));
 #ifndef QT_NO_TOOLTIP
-        labelBalance->setToolTip(QApplication::translate("OverviewPage", "Your available balance", 0, QApplication::UnicodeUTF8));
+        labelBalance->setToolTip(QApplication::translate("OverviewPage", "Your available balance", nullptr));
 #endif // QT_NO_TOOLTIP
-        labelStakeText->setText(QApplication::translate("OverviewPage", "Stake:", 0, QApplication::UnicodeUTF8));
+        labelStakeText->setText(QApplication::translate("OverviewPage", "Stake:", nullptr));
 #ifndef QT_NO_TOOLTIP
-        labelStake->setToolTip(QApplication::translate("OverviewPage", "Total of coins out of the current balance impermanently due to a profit generated recently", 0, QApplication::UnicodeUTF8));
+        labelStake->setToolTip(QApplication::translate("OverviewPage", "Total of coins out of the current balance impermanently due to a profit generated recently", nullptr));
 #endif // QT_NO_TOOLTIP
-        labelUnconfirmedText->setText(QApplication::translate("OverviewPage", "Unconfirmed:", 0, QApplication::UnicodeUTF8));
+        labelUnconfirmedText->setText(QApplication::translate("OverviewPage", "Unconfirmed:", nullptr));
 #ifndef QT_NO_TOOLTIP
-        labelUnconfirmed->setToolTip(QApplication::translate("OverviewPage", "Total of coins not yet confirmed and count pending toward the current balance", 0, QApplication::UnicodeUTF8));
+        labelUnconfirmed->setToolTip(QApplication::translate("OverviewPage", "Total of coins not yet confirmed and count pending toward the current balance", nullptr));
 #endif // QT_NO_TOOLTIP
-        labelImmatureText->setText(QApplication::translate("OverviewPage", "Immature:", 0, QApplication::UnicodeUTF8));
+        labelImmatureText->setText(QApplication::translate("OverviewPage", "Immature:", nullptr));
 #ifndef QT_NO_TOOLTIP
-        labelImmature->setToolTip(QApplication::translate("OverviewPage", "Mined balance not yet matured", 0, QApplication::UnicodeUTF8));
+        labelImmature->setToolTip(QApplication::translate("OverviewPage", "Mined balance not yet matured", nullptr));
 #endif // QT_NO_TOOLTIP
-        labelConsolidatedText->setText(QApplication::translate("OverviewPage", "Consolidated balance:", 0, QApplication::UnicodeUTF8));
+        labelConsolidatedText->setText(QApplication::translate("OverviewPage", "Consolidated balance:", nullptr));
 #ifndef QT_NO_TOOLTIP
-        labelConsolidated->setToolTip(QApplication::translate("OverviewPage", "Consolidated (total) balance of all the accounts above", 0, QApplication::UnicodeUTF8));
+        labelConsolidated->setToolTip(QApplication::translate("OverviewPage", "Consolidated (total) balance of all the accounts above", nullptr));
 #endif // QT_NO_TOOLTIP
-        label_2->setText(QApplication::translate("OverviewPage", "Number of payments:", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("OverviewPage", "Number of payments:", nullptr));
 #ifndef QT_NO_TOOLTIP
-        labelNumTransactions->setToolTip(QApplication::translate("OverviewPage", "Total number of payments in your wallet", 0, QApplication::UnicodeUTF8));
+        labelNumTransactions->setToolTip(QApplication::translate("OverviewPage", "Total number of payments in your wallet", nullptr));
 #endif // QT_NO_TOOLTIP
         trzlogo->setText(QString());
-        label_4->setText(QApplication::translate("OverviewPage", "<b>Recent payments</b>", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("OverviewPage", "<b>Recent payments</b>", nullptr));
 #ifndef QT_NO_TOOLTIP
-        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Suisscoin-classic network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
+        labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Suisscoin-classic network after a connection is established, but this process has not completed yet.", nullptr));
 #endif // QT_NO_TOOLTIP
     } // retranslateUi
 

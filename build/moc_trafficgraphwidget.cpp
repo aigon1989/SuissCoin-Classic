@@ -1,25 +1,53 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'trafficgraphwidget.h'
 **
-** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.7)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.10.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include "../src/qt/trafficgraphwidget.h"
+#include <QtCore/qbytearray.h>
+#include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'trafficgraphwidget.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 63
-#error "This file was generated using the moc from 4.8.7. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.10.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_DEPRECATED
+struct qt_meta_stringdata_TrafficGraphWidget_t {
+    QByteArrayData data[6];
+    char stringdata0[61];
+};
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_TrafficGraphWidget_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
+static const qt_meta_stringdata_TrafficGraphWidget_t qt_meta_stringdata_TrafficGraphWidget = {
+    {
+QT_MOC_LITERAL(0, 0, 18), // "TrafficGraphWidget"
+QT_MOC_LITERAL(1, 19, 11), // "updateRates"
+QT_MOC_LITERAL(2, 31, 0), // ""
+QT_MOC_LITERAL(3, 32, 13), // "setGraphRange"
+QT_MOC_LITERAL(4, 46, 8), // "nMinutes"
+QT_MOC_LITERAL(5, 55, 5) // "clear"
+
+    },
+    "TrafficGraphWidget\0updateRates\0\0"
+    "setGraphRange\0nMinutes\0clear"
+};
+#undef QT_MOC_LITERAL
+
 static const uint qt_meta_data_TrafficGraphWidget[] = {
 
  // content:
-       6,       // revision
+       7,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -29,24 +57,24 @@ static const uint qt_meta_data_TrafficGraphWidget[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: signature, parameters, type, tag, flags
-      20,   19,   19,   19, 0x0a,
-      43,   34,   19,   19, 0x0a,
-      62,   19,   19,   19, 0x0a,
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   29,    2, 0x0a /* Public */,
+       3,    1,   30,    2, 0x0a /* Public */,
+       5,    0,   33,    2, 0x0a /* Public */,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    4,
+    QMetaType::Void,
 
        0        // eod
-};
-
-static const char qt_meta_stringdata_TrafficGraphWidget[] = {
-    "TrafficGraphWidget\0\0updateRates()\0"
-    "nMinutes\0setGraphRange(int)\0clear()\0"
 };
 
 void TrafficGraphWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        Q_ASSERT(staticMetaObject.cast(_o));
         TrafficGraphWidget *_t = static_cast<TrafficGraphWidget *>(_o);
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->updateRates(); break;
         case 1: _t->setGraphRange((*reinterpret_cast< int(*)>(_a[1]))); break;
@@ -56,29 +84,22 @@ void TrafficGraphWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
     }
 }
 
-const QMetaObjectExtraData TrafficGraphWidget::staticMetaObjectExtraData = {
-    0,  qt_static_metacall 
+QT_INIT_METAOBJECT const QMetaObject TrafficGraphWidget::staticMetaObject = {
+    { &QWidget::staticMetaObject, qt_meta_stringdata_TrafficGraphWidget.data,
+      qt_meta_data_TrafficGraphWidget,  qt_static_metacall, nullptr, nullptr}
 };
 
-const QMetaObject TrafficGraphWidget::staticMetaObject = {
-    { &QWidget::staticMetaObject, qt_meta_stringdata_TrafficGraphWidget,
-      qt_meta_data_TrafficGraphWidget, &staticMetaObjectExtraData }
-};
-
-#ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &TrafficGraphWidget::getStaticMetaObject() { return staticMetaObject; }
-#endif //Q_NO_DATA_RELOCATION
 
 const QMetaObject *TrafficGraphWidget::metaObject() const
 {
-    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
 void *TrafficGraphWidget::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_TrafficGraphWidget))
-        return static_cast<void*>(const_cast< TrafficGraphWidget*>(this));
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_meta_stringdata_TrafficGraphWidget.stringdata0))
+        return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
@@ -91,7 +112,12 @@ int TrafficGraphWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 3;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 3;
     }
     return _id;
 }
+QT_WARNING_POP
 QT_END_MOC_NAMESPACE

@@ -1,25 +1,78 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'addressbookpage.h'
 **
-** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.7)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.10.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include "../src/qt/addressbookpage.h"
+#include <QtCore/qbytearray.h>
+#include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'addressbookpage.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 63
-#error "This file was generated using the moc from 4.8.7. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.10.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_DEPRECATED
+struct qt_meta_stringdata_AddressBookPage_t {
+    QByteArrayData data[23];
+    char stringdata0[326];
+};
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_AddressBookPage_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
+static const qt_meta_stringdata_AddressBookPage_t qt_meta_stringdata_AddressBookPage = {
+    {
+QT_MOC_LITERAL(0, 0, 15), // "AddressBookPage"
+QT_MOC_LITERAL(1, 16, 11), // "signMessage"
+QT_MOC_LITERAL(2, 28, 0), // ""
+QT_MOC_LITERAL(3, 29, 4), // "addr"
+QT_MOC_LITERAL(4, 34, 13), // "verifyMessage"
+QT_MOC_LITERAL(5, 48, 4), // "done"
+QT_MOC_LITERAL(6, 53, 6), // "retval"
+QT_MOC_LITERAL(7, 60, 13), // "exportClicked"
+QT_MOC_LITERAL(8, 74, 23), // "on_deleteButton_clicked"
+QT_MOC_LITERAL(9, 98, 27), // "on_newAddressButton_clicked"
+QT_MOC_LITERAL(10, 126, 26), // "on_copyToClipboard_clicked"
+QT_MOC_LITERAL(11, 153, 22), // "on_signMessage_clicked"
+QT_MOC_LITERAL(12, 176, 24), // "on_verifyMessage_clicked"
+QT_MOC_LITERAL(13, 201, 16), // "selectionChanged"
+QT_MOC_LITERAL(14, 218, 21), // "on_showQRCode_clicked"
+QT_MOC_LITERAL(15, 240, 14), // "contextualMenu"
+QT_MOC_LITERAL(16, 255, 5), // "point"
+QT_MOC_LITERAL(17, 261, 17), // "onCopyLabelAction"
+QT_MOC_LITERAL(18, 279, 12), // "onEditAction"
+QT_MOC_LITERAL(19, 292, 16), // "selectNewAddress"
+QT_MOC_LITERAL(20, 309, 6), // "parent"
+QT_MOC_LITERAL(21, 316, 5), // "begin"
+QT_MOC_LITERAL(22, 322, 3) // "end"
+
+    },
+    "AddressBookPage\0signMessage\0\0addr\0"
+    "verifyMessage\0done\0retval\0exportClicked\0"
+    "on_deleteButton_clicked\0"
+    "on_newAddressButton_clicked\0"
+    "on_copyToClipboard_clicked\0"
+    "on_signMessage_clicked\0on_verifyMessage_clicked\0"
+    "selectionChanged\0on_showQRCode_clicked\0"
+    "contextualMenu\0point\0onCopyLabelAction\0"
+    "onEditAction\0selectNewAddress\0parent\0"
+    "begin\0end"
+};
+#undef QT_MOC_LITERAL
+
 static const uint qt_meta_data_AddressBookPage[] = {
 
  // content:
-       6,       // revision
+       7,       // revision
        0,       // classname
        0,    0, // classinfo
       15,   14, // methods
@@ -29,47 +82,52 @@ static const uint qt_meta_data_AddressBookPage[] = {
        0,       // flags
        2,       // signalCount
 
- // signals: signature, parameters, type, tag, flags
-      22,   17,   16,   16, 0x05,
-      43,   17,   16,   16, 0x05,
+ // signals: name, argc, parameters, tag, flags
+       1,    1,   89,    2, 0x06 /* Public */,
+       4,    1,   92,    2, 0x06 /* Public */,
 
- // slots: signature, parameters, type, tag, flags
-      73,   66,   16,   16, 0x0a,
-      83,   16,   16,   16, 0x0a,
-      99,   16,   16,   16, 0x08,
-     125,   16,   16,   16, 0x08,
-     155,   16,   16,   16, 0x08,
-     184,   16,   16,   16, 0x08,
-     209,   16,   16,   16, 0x08,
-     236,   16,   16,   16, 0x08,
-     255,   16,   16,   16, 0x08,
-     285,  279,   16,   16, 0x08,
-     308,   16,   16,   16, 0x08,
-     328,   16,   16,   16, 0x08,
-     360,  343,   16,   16, 0x08,
+ // slots: name, argc, parameters, tag, flags
+       5,    1,   95,    2, 0x0a /* Public */,
+       7,    0,   98,    2, 0x0a /* Public */,
+       8,    0,   99,    2, 0x08 /* Private */,
+       9,    0,  100,    2, 0x08 /* Private */,
+      10,    0,  101,    2, 0x08 /* Private */,
+      11,    0,  102,    2, 0x08 /* Private */,
+      12,    0,  103,    2, 0x08 /* Private */,
+      13,    0,  104,    2, 0x08 /* Private */,
+      14,    0,  105,    2, 0x08 /* Private */,
+      15,    1,  106,    2, 0x08 /* Private */,
+      17,    0,  109,    2, 0x08 /* Private */,
+      18,    0,  110,    2, 0x08 /* Private */,
+      19,    3,  111,    2, 0x08 /* Private */,
+
+ // signals: parameters
+    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, QMetaType::QString,    3,
+
+ // slots: parameters
+    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QPoint,   16,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QModelIndex, QMetaType::Int, QMetaType::Int,   20,   21,   22,
 
        0        // eod
-};
-
-static const char qt_meta_stringdata_AddressBookPage[] = {
-    "AddressBookPage\0\0addr\0signMessage(QString)\0"
-    "verifyMessage(QString)\0retval\0done(int)\0"
-    "exportClicked()\0on_deleteButton_clicked()\0"
-    "on_newAddressButton_clicked()\0"
-    "on_copyToClipboard_clicked()\0"
-    "on_signMessage_clicked()\0"
-    "on_verifyMessage_clicked()\0"
-    "selectionChanged()\0on_showQRCode_clicked()\0"
-    "point\0contextualMenu(QPoint)\0"
-    "onCopyLabelAction()\0onEditAction()\0"
-    "parent,begin,end\0selectNewAddress(QModelIndex,int,int)\0"
 };
 
 void AddressBookPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        Q_ASSERT(staticMetaObject.cast(_o));
         AddressBookPage *_t = static_cast<AddressBookPage *>(_o);
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->signMessage((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 1: _t->verifyMessage((*reinterpret_cast< QString(*)>(_a[1]))); break;
@@ -88,32 +146,41 @@ void AddressBookPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 14: _t->selectNewAddress((*reinterpret_cast< const QModelIndex(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
         default: ;
         }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            typedef void (AddressBookPage::*_t)(QString );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&AddressBookPage::signMessage)) {
+                *result = 0;
+                return;
+            }
+        }
+        {
+            typedef void (AddressBookPage::*_t)(QString );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&AddressBookPage::verifyMessage)) {
+                *result = 1;
+                return;
+            }
+        }
     }
 }
 
-const QMetaObjectExtraData AddressBookPage::staticMetaObjectExtraData = {
-    0,  qt_static_metacall 
+QT_INIT_METAOBJECT const QMetaObject AddressBookPage::staticMetaObject = {
+    { &QDialog::staticMetaObject, qt_meta_stringdata_AddressBookPage.data,
+      qt_meta_data_AddressBookPage,  qt_static_metacall, nullptr, nullptr}
 };
 
-const QMetaObject AddressBookPage::staticMetaObject = {
-    { &QDialog::staticMetaObject, qt_meta_stringdata_AddressBookPage,
-      qt_meta_data_AddressBookPage, &staticMetaObjectExtraData }
-};
-
-#ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &AddressBookPage::getStaticMetaObject() { return staticMetaObject; }
-#endif //Q_NO_DATA_RELOCATION
 
 const QMetaObject *AddressBookPage::metaObject() const
 {
-    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
 void *AddressBookPage::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_AddressBookPage))
-        return static_cast<void*>(const_cast< AddressBookPage*>(this));
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_meta_stringdata_AddressBookPage.stringdata0))
+        return static_cast<void*>(this);
     return QDialog::qt_metacast(_clname);
 }
 
@@ -126,6 +193,10 @@ int AddressBookPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 15;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 15)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 15;
     }
     return _id;
 }
@@ -133,14 +204,15 @@ int AddressBookPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void AddressBookPage::signMessage(QString _t1)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
 void AddressBookPage::verifyMessage(QString _t1)
 {
-    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
+QT_WARNING_POP
 QT_END_MOC_NAMESPACE
