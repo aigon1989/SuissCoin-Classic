@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'rpcconsole.ui'
 **
-** Created by: Qt User Interface Compiler version 5.10.1
+** Created by: Qt User Interface Compiler version 4.8.7
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,24 +10,24 @@
 #define UI_RPCCONSOLE_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
-#include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QCheckBox>
-#include <QtWidgets/QDialog>
-#include <QtWidgets/QFrame>
-#include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QSlider>
-#include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTabWidget>
-#include <QtWidgets/QTextEdit>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
+#include <QtGui/QAction>
+#include <QtGui/QApplication>
+#include <QtGui/QButtonGroup>
+#include <QtGui/QCheckBox>
+#include <QtGui/QDialog>
+#include <QtGui/QFrame>
+#include <QtGui/QGridLayout>
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QHeaderView>
+#include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
+#include <QtGui/QPushButton>
+#include <QtGui/QSlider>
+#include <QtGui/QSpacerItem>
+#include <QtGui/QTabWidget>
+#include <QtGui/QTextEdit>
+#include <QtGui/QVBoxLayout>
+#include <QtGui/QWidget>
 #include "trafficgraphwidget.h"
 
 QT_BEGIN_NAMESPACE
@@ -93,19 +93,19 @@ public:
     void setupUi(QDialog *RPCConsole)
     {
         if (RPCConsole->objectName().isEmpty())
-            RPCConsole->setObjectName(QStringLiteral("RPCConsole"));
+            RPCConsole->setObjectName(QString::fromUtf8("RPCConsole"));
         RPCConsole->resize(760, 470);
         verticalLayout_2 = new QVBoxLayout(RPCConsole);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         tabWidget = new QTabWidget(RPCConsole);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tab_info = new QWidget();
-        tab_info->setObjectName(QStringLiteral("tab_info"));
+        tab_info->setObjectName(QString::fromUtf8("tab_info"));
         gridLayout = new QGridLayout(tab_info);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setHorizontalSpacing(12);
         label_9 = new QLabel(tab_info);
-        label_9->setObjectName(QStringLiteral("label_9"));
+        label_9->setObjectName(QString::fromUtf8("label_9"));
         QFont font;
         font.setBold(true);
         font.setWeight(75);
@@ -114,12 +114,12 @@ public:
         gridLayout->addWidget(label_9, 0, 0, 1, 1);
 
         label_5 = new QLabel(tab_info);
-        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setObjectName(QString::fromUtf8("label_5"));
 
         gridLayout->addWidget(label_5, 1, 0, 1, 1);
 
         clientName = new QLabel(tab_info);
-        clientName->setObjectName(QStringLiteral("clientName"));
+        clientName->setObjectName(QString::fromUtf8("clientName"));
         clientName->setCursor(QCursor(Qt::IBeamCursor));
         clientName->setTextFormat(Qt::PlainText);
         clientName->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -127,12 +127,12 @@ public:
         gridLayout->addWidget(clientName, 1, 1, 1, 1);
 
         label_6 = new QLabel(tab_info);
-        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setObjectName(QString::fromUtf8("label_6"));
 
         gridLayout->addWidget(label_6, 2, 0, 1, 1);
 
         clientVersion = new QLabel(tab_info);
-        clientVersion->setObjectName(QStringLiteral("clientVersion"));
+        clientVersion->setObjectName(QString::fromUtf8("clientVersion"));
         clientVersion->setCursor(QCursor(Qt::IBeamCursor));
         clientVersion->setTextFormat(Qt::PlainText);
         clientVersion->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -140,13 +140,13 @@ public:
         gridLayout->addWidget(clientVersion, 2, 1, 1, 1);
 
         label_14 = new QLabel(tab_info);
-        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setObjectName(QString::fromUtf8("label_14"));
         label_14->setIndent(10);
 
         gridLayout->addWidget(label_14, 3, 0, 1, 1);
 
         openSSLVersion = new QLabel(tab_info);
-        openSSLVersion->setObjectName(QStringLiteral("openSSLVersion"));
+        openSSLVersion->setObjectName(QString::fromUtf8("openSSLVersion"));
         openSSLVersion->setCursor(QCursor(Qt::IBeamCursor));
         openSSLVersion->setTextFormat(Qt::PlainText);
         openSSLVersion->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -154,12 +154,12 @@ public:
         gridLayout->addWidget(openSSLVersion, 3, 1, 1, 1);
 
         label_12 = new QLabel(tab_info);
-        label_12->setObjectName(QStringLiteral("label_12"));
+        label_12->setObjectName(QString::fromUtf8("label_12"));
 
         gridLayout->addWidget(label_12, 4, 0, 1, 1);
 
         buildDate = new QLabel(tab_info);
-        buildDate->setObjectName(QStringLiteral("buildDate"));
+        buildDate->setObjectName(QString::fromUtf8("buildDate"));
         buildDate->setCursor(QCursor(Qt::IBeamCursor));
         buildDate->setTextFormat(Qt::PlainText);
         buildDate->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -167,12 +167,12 @@ public:
         gridLayout->addWidget(buildDate, 4, 1, 1, 1);
 
         label_13 = new QLabel(tab_info);
-        label_13->setObjectName(QStringLiteral("label_13"));
+        label_13->setObjectName(QString::fromUtf8("label_13"));
 
         gridLayout->addWidget(label_13, 5, 0, 1, 1);
 
         startupTime = new QLabel(tab_info);
-        startupTime->setObjectName(QStringLiteral("startupTime"));
+        startupTime->setObjectName(QString::fromUtf8("startupTime"));
         startupTime->setCursor(QCursor(Qt::IBeamCursor));
         startupTime->setTextFormat(Qt::PlainText);
         startupTime->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -180,18 +180,18 @@ public:
         gridLayout->addWidget(startupTime, 5, 1, 1, 1);
 
         label_11 = new QLabel(tab_info);
-        label_11->setObjectName(QStringLiteral("label_11"));
+        label_11->setObjectName(QString::fromUtf8("label_11"));
         label_11->setFont(font);
 
         gridLayout->addWidget(label_11, 6, 0, 1, 1);
 
         label_7 = new QLabel(tab_info);
-        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setObjectName(QString::fromUtf8("label_7"));
 
         gridLayout->addWidget(label_7, 7, 0, 1, 1);
 
         numberOfConnections = new QLabel(tab_info);
-        numberOfConnections->setObjectName(QStringLiteral("numberOfConnections"));
+        numberOfConnections->setObjectName(QString::fromUtf8("numberOfConnections"));
         numberOfConnections->setCursor(QCursor(Qt::IBeamCursor));
         numberOfConnections->setTextFormat(Qt::PlainText);
         numberOfConnections->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -199,29 +199,29 @@ public:
         gridLayout->addWidget(numberOfConnections, 7, 1, 1, 1);
 
         label_8 = new QLabel(tab_info);
-        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setObjectName(QString::fromUtf8("label_8"));
 
         gridLayout->addWidget(label_8, 8, 0, 1, 1);
 
         isTestNet = new QCheckBox(tab_info);
-        isTestNet->setObjectName(QStringLiteral("isTestNet"));
+        isTestNet->setObjectName(QString::fromUtf8("isTestNet"));
         isTestNet->setEnabled(false);
 
         gridLayout->addWidget(isTestNet, 8, 1, 1, 1);
 
         label_10 = new QLabel(tab_info);
-        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setObjectName(QString::fromUtf8("label_10"));
         label_10->setFont(font);
 
         gridLayout->addWidget(label_10, 9, 0, 1, 1);
 
         label_3 = new QLabel(tab_info);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setObjectName(QString::fromUtf8("label_3"));
 
         gridLayout->addWidget(label_3, 10, 0, 1, 1);
 
         numberOfBlocks = new QLabel(tab_info);
-        numberOfBlocks->setObjectName(QStringLiteral("numberOfBlocks"));
+        numberOfBlocks->setObjectName(QString::fromUtf8("numberOfBlocks"));
         numberOfBlocks->setCursor(QCursor(Qt::IBeamCursor));
         numberOfBlocks->setTextFormat(Qt::PlainText);
         numberOfBlocks->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -229,12 +229,12 @@ public:
         gridLayout->addWidget(numberOfBlocks, 10, 1, 1, 1);
 
         label_4 = new QLabel(tab_info);
-        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setObjectName(QString::fromUtf8("label_4"));
 
         gridLayout->addWidget(label_4, 11, 0, 1, 1);
 
         totalBlocks = new QLabel(tab_info);
-        totalBlocks->setObjectName(QStringLiteral("totalBlocks"));
+        totalBlocks->setObjectName(QString::fromUtf8("totalBlocks"));
         totalBlocks->setCursor(QCursor(Qt::IBeamCursor));
         totalBlocks->setTextFormat(Qt::PlainText);
         totalBlocks->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -242,12 +242,12 @@ public:
         gridLayout->addWidget(totalBlocks, 11, 1, 1, 1);
 
         label_2 = new QLabel(tab_info);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setObjectName(QString::fromUtf8("label_2"));
 
         gridLayout->addWidget(label_2, 12, 0, 1, 1);
 
         lastBlockTime = new QLabel(tab_info);
-        lastBlockTime->setObjectName(QStringLiteral("lastBlockTime"));
+        lastBlockTime->setObjectName(QString::fromUtf8("lastBlockTime"));
         lastBlockTime->setCursor(QCursor(Qt::IBeamCursor));
         lastBlockTime->setTextFormat(Qt::PlainText);
         lastBlockTime->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -259,25 +259,25 @@ public:
         gridLayout->addItem(verticalSpacer_2, 13, 0, 1, 1);
 
         labelDebugLogfile = new QLabel(tab_info);
-        labelDebugLogfile->setObjectName(QStringLiteral("labelDebugLogfile"));
+        labelDebugLogfile->setObjectName(QString::fromUtf8("labelDebugLogfile"));
         labelDebugLogfile->setFont(font);
 
         gridLayout->addWidget(labelDebugLogfile, 14, 0, 1, 1);
 
         openDebugLogfileButton = new QPushButton(tab_info);
-        openDebugLogfileButton->setObjectName(QStringLiteral("openDebugLogfileButton"));
+        openDebugLogfileButton->setObjectName(QString::fromUtf8("openDebugLogfileButton"));
         openDebugLogfileButton->setAutoDefault(false);
 
         gridLayout->addWidget(openDebugLogfileButton, 15, 0, 1, 1);
 
         labelCLOptions = new QLabel(tab_info);
-        labelCLOptions->setObjectName(QStringLiteral("labelCLOptions"));
+        labelCLOptions->setObjectName(QString::fromUtf8("labelCLOptions"));
         labelCLOptions->setFont(font);
 
         gridLayout->addWidget(labelCLOptions, 16, 0, 1, 1);
 
         showCLOptionsButton = new QPushButton(tab_info);
-        showCLOptionsButton->setObjectName(QStringLiteral("showCLOptionsButton"));
+        showCLOptionsButton->setObjectName(QString::fromUtf8("showCLOptionsButton"));
         showCLOptionsButton->setAutoDefault(false);
 
         gridLayout->addWidget(showCLOptionsButton, 17, 0, 1, 1);
@@ -289,12 +289,12 @@ public:
         gridLayout->setColumnStretch(1, 1);
         tabWidget->addTab(tab_info, QString());
         tab_console = new QWidget();
-        tab_console->setObjectName(QStringLiteral("tab_console"));
+        tab_console->setObjectName(QString::fromUtf8("tab_console"));
         verticalLayout_3 = new QVBoxLayout(tab_console);
         verticalLayout_3->setSpacing(3);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         messagesWidget = new QTextEdit(tab_console);
-        messagesWidget->setObjectName(QStringLiteral("messagesWidget"));
+        messagesWidget->setObjectName(QString::fromUtf8("messagesWidget"));
         messagesWidget->setMinimumSize(QSize(0, 100));
         messagesWidget->setReadOnly(true);
         messagesWidget->setProperty("tabKeyNavigation", QVariant(false));
@@ -304,27 +304,25 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(3);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(tab_console);
-        label->setObjectName(QStringLiteral("label"));
-        label->setText(QStringLiteral(">"));
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setText(QString::fromUtf8(">"));
 
         horizontalLayout->addWidget(label);
 
         lineEdit = new QLineEdit(tab_console);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
 
         horizontalLayout->addWidget(lineEdit);
 
         clearButton = new QPushButton(tab_console);
-        clearButton->setObjectName(QStringLiteral("clearButton"));
+        clearButton->setObjectName(QString::fromUtf8("clearButton"));
         clearButton->setMaximumSize(QSize(24, 24));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/icons/remove"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/icons/remove"), QSize(), QIcon::Normal, QIcon::Off);
         clearButton->setIcon(icon);
-#ifndef QT_NO_SHORTCUT
-        clearButton->setShortcut(QStringLiteral("Ctrl+L"));
-#endif // QT_NO_SHORTCUT
+        clearButton->setShortcut(QString::fromUtf8("Ctrl+L"));
         clearButton->setAutoDefault(false);
 
         horizontalLayout->addWidget(clearButton);
@@ -334,13 +332,13 @@ public:
 
         tabWidget->addTab(tab_console, QString());
         tab_nettraffic = new QWidget();
-        tab_nettraffic->setObjectName(QStringLiteral("tab_nettraffic"));
+        tab_nettraffic->setObjectName(QString::fromUtf8("tab_nettraffic"));
         horizontalLayout_3 = new QHBoxLayout(tab_nettraffic);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         trafficGraph = new TrafficGraphWidget(tab_nettraffic);
-        trafficGraph->setObjectName(QStringLiteral("trafficGraph"));
+        trafficGraph->setObjectName(QString::fromUtf8("trafficGraph"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -350,9 +348,9 @@ public:
         verticalLayout_4->addWidget(trafficGraph);
 
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         line = new QFrame(tab_nettraffic);
-        line->setObjectName(QStringLiteral("line"));
+        line->setObjectName(QString::fromUtf8("line"));
         QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
@@ -372,19 +370,19 @@ public:
         horizontalLayout_2->addWidget(line);
 
         label_16 = new QLabel(tab_nettraffic);
-        label_16->setObjectName(QStringLiteral("label_16"));
+        label_16->setObjectName(QString::fromUtf8("label_16"));
 
         horizontalLayout_2->addWidget(label_16);
 
         lblBytesRx = new QLabel(tab_nettraffic);
-        lblBytesRx->setObjectName(QStringLiteral("lblBytesRx"));
+        lblBytesRx->setObjectName(QString::fromUtf8("lblBytesRx"));
         lblBytesRx->setMinimumSize(QSize(60, 0));
         lblBytesRx->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(lblBytesRx);
 
         line_2 = new QFrame(tab_nettraffic);
-        line_2->setObjectName(QStringLiteral("line_2"));
+        line_2->setObjectName(QString::fromUtf8("line_2"));
         sizePolicy1.setHeightForWidth(line_2->sizePolicy().hasHeightForWidth());
         line_2->setSizePolicy(sizePolicy1);
         line_2->setMinimumSize(QSize(10, 0));
@@ -401,19 +399,19 @@ public:
         horizontalLayout_2->addWidget(line_2);
 
         label_17 = new QLabel(tab_nettraffic);
-        label_17->setObjectName(QStringLiteral("label_17"));
+        label_17->setObjectName(QString::fromUtf8("label_17"));
 
         horizontalLayout_2->addWidget(label_17);
 
         lblBytesTx = new QLabel(tab_nettraffic);
-        lblBytesTx->setObjectName(QStringLiteral("lblBytesTx"));
+        lblBytesTx->setObjectName(QString::fromUtf8("lblBytesTx"));
         lblBytesTx->setMinimumSize(QSize(60, 0));
         lblBytesTx->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(lblBytesTx);
 
         sldGraphRange = new QSlider(tab_nettraffic);
-        sldGraphRange->setObjectName(QStringLiteral("sldGraphRange"));
+        sldGraphRange->setObjectName(QString::fromUtf8("sldGraphRange"));
         sldGraphRange->setMinimum(1);
         sldGraphRange->setMaximum(288);
         sldGraphRange->setPageStep(12);
@@ -423,14 +421,14 @@ public:
         horizontalLayout_2->addWidget(sldGraphRange);
 
         lblGraphRange = new QLabel(tab_nettraffic);
-        lblGraphRange->setObjectName(QStringLiteral("lblGraphRange"));
+        lblGraphRange->setObjectName(QString::fromUtf8("lblGraphRange"));
         lblGraphRange->setMinimumSize(QSize(70, 0));
         lblGraphRange->setAlignment(Qt::AlignCenter);
 
         horizontalLayout_2->addWidget(lblGraphRange);
 
         btnClearTrafficGraph = new QPushButton(tab_nettraffic);
-        btnClearTrafficGraph->setObjectName(QStringLiteral("btnClearTrafficGraph"));
+        btnClearTrafficGraph->setObjectName(QString::fromUtf8("btnClearTrafficGraph"));
 
         horizontalLayout_2->addWidget(btnClearTrafficGraph);
 
@@ -455,50 +453,50 @@ public:
 
     void retranslateUi(QDialog *RPCConsole)
     {
-        RPCConsole->setWindowTitle(QApplication::translate("RPCConsole", "Suisscoin-classic - RPC Console", nullptr));
-        label_9->setText(QApplication::translate("RPCConsole", "Suisscoin-classic Core", nullptr));
-        label_5->setText(QApplication::translate("RPCConsole", "Client name", nullptr));
-        clientName->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_6->setText(QApplication::translate("RPCConsole", "Client version", nullptr));
-        clientVersion->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_14->setText(QApplication::translate("RPCConsole", "Using OpenSSL version", nullptr));
-        openSSLVersion->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_12->setText(QApplication::translate("RPCConsole", "Build date", nullptr));
-        buildDate->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_13->setText(QApplication::translate("RPCConsole", "Startup time", nullptr));
-        startupTime->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_11->setText(QApplication::translate("RPCConsole", "Network", nullptr));
-        label_7->setText(QApplication::translate("RPCConsole", "Number of connections", nullptr));
-        numberOfConnections->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_8->setText(QApplication::translate("RPCConsole", "On testnet", nullptr));
+        RPCConsole->setWindowTitle(QApplication::translate("RPCConsole", "Suisscoin-classic - RPC Console", 0, QApplication::UnicodeUTF8));
+        label_9->setText(QApplication::translate("RPCConsole", "Suisscoin-classic Core", 0, QApplication::UnicodeUTF8));
+        label_5->setText(QApplication::translate("RPCConsole", "Client name", 0, QApplication::UnicodeUTF8));
+        clientName->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("RPCConsole", "Client version", 0, QApplication::UnicodeUTF8));
+        clientVersion->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_14->setText(QApplication::translate("RPCConsole", "Using OpenSSL version", 0, QApplication::UnicodeUTF8));
+        openSSLVersion->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_12->setText(QApplication::translate("RPCConsole", "Build date", 0, QApplication::UnicodeUTF8));
+        buildDate->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_13->setText(QApplication::translate("RPCConsole", "Startup time", 0, QApplication::UnicodeUTF8));
+        startupTime->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_11->setText(QApplication::translate("RPCConsole", "Network", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("RPCConsole", "Number of connections", 0, QApplication::UnicodeUTF8));
+        numberOfConnections->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_8->setText(QApplication::translate("RPCConsole", "On testnet", 0, QApplication::UnicodeUTF8));
         isTestNet->setText(QString());
-        label_10->setText(QApplication::translate("RPCConsole", "Block chain", nullptr));
-        label_3->setText(QApplication::translate("RPCConsole", "Current number of blocks", nullptr));
-        numberOfBlocks->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_4->setText(QApplication::translate("RPCConsole", "Estimated total blocks", nullptr));
-        totalBlocks->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        label_2->setText(QApplication::translate("RPCConsole", "Last block time", nullptr));
-        lastBlockTime->setText(QApplication::translate("RPCConsole", "N/A", nullptr));
-        labelDebugLogfile->setText(QApplication::translate("RPCConsole", "Debug log file", nullptr));
+        label_10->setText(QApplication::translate("RPCConsole", "Block chain", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("RPCConsole", "Current number of blocks", 0, QApplication::UnicodeUTF8));
+        numberOfBlocks->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("RPCConsole", "Estimated total blocks", 0, QApplication::UnicodeUTF8));
+        totalBlocks->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("RPCConsole", "Last block time", 0, QApplication::UnicodeUTF8));
+        lastBlockTime->setText(QApplication::translate("RPCConsole", "N/A", 0, QApplication::UnicodeUTF8));
+        labelDebugLogfile->setText(QApplication::translate("RPCConsole", "Debug log file", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        openDebugLogfileButton->setToolTip(QApplication::translate("RPCConsole", "Open the Suisscoin-classic debug log file from the current data directory. This can take a few seconds for large log files.", nullptr));
+        openDebugLogfileButton->setToolTip(QApplication::translate("RPCConsole", "Open the Suisscoin-classic debug log file from the current data directory. This can take a few seconds for large log files.", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        openDebugLogfileButton->setText(QApplication::translate("RPCConsole", "&Open", nullptr));
-        labelCLOptions->setText(QApplication::translate("RPCConsole", "Command-line options", nullptr));
+        openDebugLogfileButton->setText(QApplication::translate("RPCConsole", "&Open", 0, QApplication::UnicodeUTF8));
+        labelCLOptions->setText(QApplication::translate("RPCConsole", "Command-line options", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        showCLOptionsButton->setToolTip(QApplication::translate("RPCConsole", "Show the Suisscoin-classic-Qt help message to get a list with possible Suisscoin-classic command-line options.", nullptr));
+        showCLOptionsButton->setToolTip(QApplication::translate("RPCConsole", "Show the Suisscoin-classic-Qt help message to get a list with possible Suisscoin-classic command-line options.", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        showCLOptionsButton->setText(QApplication::translate("RPCConsole", "&Show", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_info), QApplication::translate("RPCConsole", "&Information", nullptr));
+        showCLOptionsButton->setText(QApplication::translate("RPCConsole", "&Show", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tab_info), QApplication::translate("RPCConsole", "&Information", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
-        clearButton->setToolTip(QApplication::translate("RPCConsole", "Clear console", nullptr));
+        clearButton->setToolTip(QApplication::translate("RPCConsole", "Clear console", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         clearButton->setText(QString());
-        tabWidget->setTabText(tabWidget->indexOf(tab_console), QApplication::translate("RPCConsole", "&Console", nullptr));
-        label_16->setText(QApplication::translate("RPCConsole", "Received:", nullptr));
-        label_17->setText(QApplication::translate("RPCConsole", "Transmitted:", nullptr));
-        btnClearTrafficGraph->setText(QApplication::translate("RPCConsole", "&Clear", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_nettraffic), QApplication::translate("RPCConsole", "&Network activity", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_console), QApplication::translate("RPCConsole", "&Console", 0, QApplication::UnicodeUTF8));
+        label_16->setText(QApplication::translate("RPCConsole", "Received:", 0, QApplication::UnicodeUTF8));
+        label_17->setText(QApplication::translate("RPCConsole", "Transmitted:", 0, QApplication::UnicodeUTF8));
+        btnClearTrafficGraph->setText(QApplication::translate("RPCConsole", "&Clear", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tab_nettraffic), QApplication::translate("RPCConsole", "&Network activity", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

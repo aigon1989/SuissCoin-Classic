@@ -274,12 +274,7 @@ void BlockExplorer::updateExplorer(bool block) {
             if(tx.IsCoinBase())
               nSubsidy = GetProofOfWorkReward(pindex, 0);
             else{
-              // ppcoin: coin stake tx earns reward instead of paying fee
-                uint64 nCoinAge;
-                uint64 nCoinAgeFails;
-                if (!tx.GetCoinAge(&nCoinAge, &nCoinAgeFails))
-                printf("ConnectBlock() : %s unable to get coin age for coinstake", tx.GetHash().ToString().c_str());
-                nSubsidy = GetProofOfStakeReward(pindex, 0,nCoinAge);
+                nSubsidy = GetProofOfStakeReward(pindex, 0);
             }
             nFees = nValueOut - nValueIn - nSubsidy;
             ui->feeText->setText(QString(tr("Reward + fees:")));

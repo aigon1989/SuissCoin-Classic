@@ -335,12 +335,7 @@ CBlock* CreateNewBlock(CWallet* pwallet, bool fProofOfStake, int64 *pStakeReward
         //printf("%s\n", "Creating new index to know the full money supply %d\n",newBlockIndex->nMoneySupply);
 
         if(fProofOfStake){
-            // ppcoin: coin stake tx earns reward instead of paying fee
-            uint64 nCoinAge;
-            uint64 nCoinAgeFails;
-            if (!pblock->vtx[0].GetCoinAge(&nCoinAge, &nCoinAgeFails))
-                printf("ConnectBlock() : %s unable to get coin age for coinstake",pblock-> vtx[0].GetHash().ToString().c_str());
-            *pStakeReward = GetProofOfStakeReward(newBlockIndex, nFees, nCoinAge);
+            *pStakeReward = GetProofOfStakeReward(newBlockIndex, nFees);
         } 
         else pblock->vtx[0].vout[0].nValue = GetProofOfWorkReward(newBlockIndex, nFees);
 

@@ -29,7 +29,7 @@ class CBlockIndexTrustComparator;
 
 /* Maturity threshold for PoW/PoS base transactions, in blocks (confirmations) */
 extern int nBaseMaturity;
-static const int BASE_MATURITY = 10;
+static const int BASE_MATURITY = 200;
 static const int BASE_MATURITY_TESTNET = 10;
 /* Maturity threshold for regular transactions, in blocks (confirmations) */
 static const int TX_MATURITY = 6;
@@ -150,7 +150,7 @@ bool LoadExternalBlockFile(FILE* fileIn, CDiskBlockPos *dbp = NULL);
 bool CheckProofOfWork(uint256 hashPoW, uint nBits);
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake, bool fPrettyPrint);
 int64 GetProofOfWorkReward(const CBlockIndex* pindex, int64 nFees);
-int64 GetProofOfStakeReward(const CBlockIndex* pindex, int64 nFees, int64 nCoinAge);
+int64 GetProofOfStakeReward(const CBlockIndex* pindex, int64 nFees);
 unsigned int ComputeMinWork(unsigned int nBase, int64 nTime);
 unsigned int ComputeMinStake(unsigned int nBase, int64 nTime, unsigned int nBlockTime);
 int GetNumBlocksOfPeers();

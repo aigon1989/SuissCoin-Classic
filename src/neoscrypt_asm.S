@@ -1777,7 +1777,7 @@ _neoscrypt_fastkdf_opt:
 	movq	$256, %rbp
 	subq	%r13, %rbp
 	cmpq	%r15, %rbp
-	jc	.fastkdf_crosiccopy
+	jc	.fastkdf_crosscopy
 
 	leaq	320(%r12, %r13), %rbp
 #ifdef WIN64
@@ -1802,7 +1802,7 @@ _neoscrypt_fastkdf_opt:
 	call	neoscrypt_copy
 	jmp	.fastkdf_finish
 
-.fastkdf_crosiccopy:
+.fastkdf_crosscopy:
 	leaq	320(%r12, %r13), %rbx
 #ifdef WIN64
 	movq	%rbx, %rcx
@@ -6551,7 +6551,7 @@ _neoscrypt_fastkdf_opt:
 	movl	$256, %ebx
 	subl	%edi, %ebx
 	cmpl	%esi, %ebx
-	jc	.fastkdf_crosiccopy
+	jc	.fastkdf_crosscopy
 
 	leal	320(%ebp, %edi), %ebx
 	movl	%ebx, 0(%esp)
@@ -6564,7 +6564,7 @@ _neoscrypt_fastkdf_opt:
 	call	neoscrypt_copy
 	jmp	.fastkdf_finish
 
-.fastkdf_crosiccopy:
+.fastkdf_crosscopy:
 	leal	320(%ebp, %edi), %edi
 	movl	%edi, 0(%esp)
 	movl	%ebp, 4(%esp)

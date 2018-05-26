@@ -1076,12 +1076,12 @@ int64 GetProofOfWorkReward(const CBlockIndex* pindex, int64 nFees) {
 
     if(nHeight > 0)  nSubsidy = 100 * COIN;
     //if(nHeight > 10) nSubsidy = 100 * COIN;
-    if(nHeight > 1600000) nSubsidy >>= ((nHeight - 1) / 1600000);
+    if(nHeight > 100000) nSubsidy >>= ((nHeight - 1) / 100000);
 
     return(nSubsidy + nFees);
 }
 
-int64 GetProofOfStakeReward(const CBlockIndex* pindex, int64 nFees, int64 nCoinAge) {
+int64 GetProofOfStakeReward(const CBlockIndex* pindex, int64 nFees) {
     int64_t nSubsidy;
     int64_t nHeight = pindex -> nHeight;
     int64_t nMoneySupply = pindex -> nMoneySupply;
@@ -1091,28 +1091,28 @@ int64 GetProofOfStakeReward(const CBlockIndex* pindex, int64 nFees, int64 nCoinA
         return nFees;
     }
 
-    nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);
+    nSubsidy = 100 * COIN;;
     
     if(nHeight >= 0 && nHeight < 10001) 
-        return nSubsidy * 5 + nFees;
+        return (nSubsidy * 5 + nFees);
     else if(nHeight >= 10001 && nHeight <= 20000) 
-        return nSubsidy * 10 + nFees;
+        return (nSubsidy * 10 + nFees);
     else if(nHeight >= 20001 && nHeight <= 30000) 
-        return nSubsidy * 25 + nFees;
+        return (nSubsidy * 25 + nFees);
     else if(nHeight >= 30001 && nHeight <= 40000) 
-        return nSubsidy * 100 + nFees;
+        return (nSubsidy * 100 + nFees);
     else if(nHeight >= 40001 && nHeight <= 50000) 
-        return nSubsidy * 150 + nFees;
+        return (nSubsidy * 150 + nFees);
     else if(nHeight >= 50001 && nHeight <= 60000) 
-        return nSubsidy * 500 + nFees;
+        return (nSubsidy * 500 + nFees);
     else if(nHeight >= 60001 && nHeight <= 70000) 
-        return nSubsidy * 1000 + nFees;
+        return (nSubsidy * 1000 + nFees);
     else if(nHeight >= 70001 && nHeight <= 90000) 
-        return nSubsidy * 5000 + nFees;
+        return (nSubsidy * 5000 + nFees);
     else if(nHeight >= 90001 && nHeight <= 100000) 
-        return nSubsidy * 150 + nFees;
+        return (nSubsidy * 150 + nFees);
     else 
-        return nSubsidy = nFees;
+        return nFees;
 }
 
 int64 inline GetTargetSpacingWorkMax() {
@@ -1702,7 +1702,6 @@ bool CBlock::ConnectBlock(CBlockIndex* pindex, CCoinsViewCache &view) {
 
     int64 nFees = 0, nValueIn = 0, nValueOut = 0, nActualStakeReward = 0;
     unsigned int nSigOps = 0;
-    unsigned int vtx_stake_index = 0;
     for(i = 0; i < vtx.size(); i++) {
         const CTransaction &tx = vtx[i];
         nSigOps += tx.GetLegacySigOpCount();
@@ -1736,9 +1735,8 @@ bool CBlock::ConnectBlock(CBlockIndex* pindex, CCoinsViewCache &view) {
                   return(DoS(100,
                     error("ConnectBlock() : block %d proof-of-stake input amount too low " \
                       "(%" PRI64d " actual, %" PRI64d " expected)",
-                      pindex->nHeight, nActualStakeReward, MIN_STAKE_AMOUNT)));
+                      pindex->nHeight, nTxValueIn, MIN_STAKE_AMOUNT)));
                 nActualStakeReward = nTxValueOut - nTxValueIn;
-                vtx_stake_index = i;
             } else nFees += nTxValueIn - nTxValueOut;
 
             if(!tx.CheckInputs(view, CS_AFTER_CHECKPOINT, flags))
@@ -1762,17 +1760,11 @@ bool CBlock::ConnectBlock(CBlockIndex* pindex, CCoinsViewCache &view) {
         "(%" PRI64d " actual, %" PRI64d " expected)",
         pindex->nHeight, vtx[0].GetValueOut(), GetProofOfWorkReward(pindex, nFees))));
 
-    // ppcoin: coin stake tx earns reward instead of paying fee
-        uint64 nCoinAge;
-        uint64 nCoinAgeFails;
-        if (!vtx[vtx_stake_index].GetCoinAge(&nCoinAge, &nCoinAgeFails))
-            return error("ConnectBlock() : %s unable to get coin age for coinstake", vtx[vtx_stake_index].GetHash().ToString().c_str());
-
     /* Check PoS block reward */
-    if(IsProofOfStake() && (nActualStakeReward > GetProofOfStakeReward(pindex, nFees,nCoinAge)))
+    if(IsProofOfStake() && (nActualStakeReward > GetProofOfStakeReward(pindex, nFees)))
       return(DoS(100, error("ConnectBlock() : block %d proof-of-stake reward is too high " \
         "(%" PRI64d " actual, %" PRI64d " expected)",
-        pindex->nHeight, nActualStakeReward, GetProofOfStakeReward(pindex, nFees,nCoinAge))));
+        pindex->nHeight, nActualStakeReward, GetProofOfStakeReward(pindex, nFees))));
 
     pindex->nMint = nValueOut - nValueIn + nFees;
     pindex->nMoneySupply = (pindex->pprev? pindex->pprev->nMoneySupply : 0) + nValueOut - nValueIn;
@@ -2668,13 +2660,17 @@ bool CBlock::SignBlock(CWallet& wallet, int64 nStakeReward) {
 
     // if we are trying to sign
     //    something except proof-of-stake block template
-    if (!vtx[0].vout[0].IsEmpty())
+    if (!vtx[0].vout[0].IsEmpty()){
+        printf("Empty POS TX!\n");
         return false;
+    }
 
     // if we are trying to sign
     //    a complete proof-of-stake block
-    if (IsProofOfStake())
+    if (IsProofOfStake()){
+         printf("Is a PoS\n");
         return true;
+    }
 
     static int64 nLastCoinStakeSearchTime = GetAdjustedTime(); // startup timestamp
 

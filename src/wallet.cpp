@@ -1237,7 +1237,7 @@ bool CWallet::SelectCoinsStaking(int64 nTargetValue,
         for(map<uint256, CWalletTx>::const_iterator it = mapWallet.begin();
           it != mapWallet.end(); it++) {
             const CWalletTx* pcoin = &(*it).second;
-
+            
             /* Discard if the age requirement is unmet */
             if(nCurrentTime < (pcoin->nTime + nStakeMinAge))
               continue;

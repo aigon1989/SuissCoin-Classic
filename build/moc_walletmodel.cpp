@@ -1,77 +1,25 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'walletmodel.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.10.1)
+** Created by: The Qt Meta Object Compiler version 63 (Qt 4.8.7)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include "../src/qt/walletmodel.h"
-#include <QtCore/qbytearray.h>
-#include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'walletmodel.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.10.1. It"
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.7. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_WalletModel_t {
-    QByteArrayData data[24];
-    char stringdata0[257];
-};
-#define QT_MOC_LITERAL(idx, ofs, len) \
-    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_WalletModel_t, stringdata0) + ofs \
-        - idx * sizeof(QByteArrayData)) \
-    )
-static const qt_meta_stringdata_WalletModel_t qt_meta_stringdata_WalletModel = {
-    {
-QT_MOC_LITERAL(0, 0, 11), // "WalletModel"
-QT_MOC_LITERAL(1, 12, 14), // "balanceChanged"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 7), // "balance"
-QT_MOC_LITERAL(4, 36, 5), // "stake"
-QT_MOC_LITERAL(5, 42, 11), // "unconfirmed"
-QT_MOC_LITERAL(6, 54, 8), // "immature"
-QT_MOC_LITERAL(7, 63, 22), // "numTransactionsChanged"
-QT_MOC_LITERAL(8, 86, 5), // "count"
-QT_MOC_LITERAL(9, 92, 23), // "encryptionStatusChanged"
-QT_MOC_LITERAL(10, 116, 6), // "status"
-QT_MOC_LITERAL(11, 123, 13), // "requireUnlock"
-QT_MOC_LITERAL(12, 137, 5), // "error"
-QT_MOC_LITERAL(13, 143, 5), // "title"
-QT_MOC_LITERAL(14, 149, 7), // "message"
-QT_MOC_LITERAL(15, 157, 5), // "modal"
-QT_MOC_LITERAL(16, 163, 12), // "updateStatus"
-QT_MOC_LITERAL(17, 176, 17), // "updateTransaction"
-QT_MOC_LITERAL(18, 194, 4), // "hash"
-QT_MOC_LITERAL(19, 199, 17), // "updateAddressBook"
-QT_MOC_LITERAL(20, 217, 7), // "address"
-QT_MOC_LITERAL(21, 225, 5), // "label"
-QT_MOC_LITERAL(22, 231, 6), // "isMine"
-QT_MOC_LITERAL(23, 238, 18) // "pollBalanceChanged"
-
-    },
-    "WalletModel\0balanceChanged\0\0balance\0"
-    "stake\0unconfirmed\0immature\0"
-    "numTransactionsChanged\0count\0"
-    "encryptionStatusChanged\0status\0"
-    "requireUnlock\0error\0title\0message\0"
-    "modal\0updateStatus\0updateTransaction\0"
-    "hash\0updateAddressBook\0address\0label\0"
-    "isMine\0pollBalanceChanged"
-};
-#undef QT_MOC_LITERAL
-
 static const uint qt_meta_data_WalletModel[] = {
 
  // content:
-       7,       // revision
+       6,       // revision
        0,       // classname
        0,    0, // classinfo
        9,   14, // methods
@@ -81,40 +29,40 @@ static const uint qt_meta_data_WalletModel[] = {
        0,       // flags
        5,       // signalCount
 
- // signals: name, argc, parameters, tag, flags
-       1,    4,   59,    2, 0x06 /* Public */,
-       7,    1,   68,    2, 0x06 /* Public */,
-       9,    1,   71,    2, 0x06 /* Public */,
-      11,    0,   74,    2, 0x06 /* Public */,
-      12,    3,   75,    2, 0x06 /* Public */,
+ // signals: signature, parameters, type, tag, flags
+      48,   13,   12,   12, 0x05,
+      98,   92,   12,   12, 0x05,
+     133,  126,   12,   12, 0x05,
+     162,   12,   12,   12, 0x05,
+     198,  178,   12,   12, 0x05,
 
- // slots: name, argc, parameters, tag, flags
-      16,    0,   82,    2, 0x0a /* Public */,
-      17,    2,   83,    2, 0x0a /* Public */,
-      19,    4,   88,    2, 0x0a /* Public */,
-      23,    0,   97,    2, 0x0a /* Public */,
-
- // signals: parameters
-    QMetaType::Void, QMetaType::LongLong, QMetaType::LongLong, QMetaType::LongLong, QMetaType::LongLong,    3,    4,    5,    6,
-    QMetaType::Void, QMetaType::Int,    8,
-    QMetaType::Void, QMetaType::Int,   10,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Bool,   13,   14,   15,
-
- // slots: parameters
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int,   18,   10,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Bool, QMetaType::Int,   20,   21,   22,   10,
-    QMetaType::Void,
+ // slots: signature, parameters, type, tag, flags
+     226,   12,   12,   12, 0x0a,
+     253,  241,   12,   12, 0x0a,
+     312,  284,   12,   12, 0x0a,
+     356,   12,   12,   12, 0x0a,
 
        0        // eod
+};
+
+static const char qt_meta_stringdata_WalletModel[] = {
+    "WalletModel\0\0balance,stake,unconfirmed,immature\0"
+    "balanceChanged(qint64,qint64,qint64,qint64)\0"
+    "count\0numTransactionsChanged(int)\0"
+    "status\0encryptionStatusChanged(int)\0"
+    "requireUnlock()\0title,message,modal\0"
+    "error(QString,QString,bool)\0updateStatus()\0"
+    "hash,status\0updateTransaction(QString,int)\0"
+    "address,label,isMine,status\0"
+    "updateAddressBook(QString,QString,bool,int)\0"
+    "pollBalanceChanged()\0"
 };
 
 void WalletModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
         WalletModel *_t = static_cast<WalletModel *>(_o);
-        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->balanceChanged((*reinterpret_cast< qint64(*)>(_a[1])),(*reinterpret_cast< qint64(*)>(_a[2])),(*reinterpret_cast< qint64(*)>(_a[3])),(*reinterpret_cast< qint64(*)>(_a[4]))); break;
         case 1: _t->numTransactionsChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
@@ -127,62 +75,32 @@ void WalletModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 8: _t->pollBalanceChanged(); break;
         default: ;
         }
-    } else if (_c == QMetaObject::IndexOfMethod) {
-        int *result = reinterpret_cast<int *>(_a[0]);
-        {
-            typedef void (WalletModel::*_t)(qint64 , qint64 , qint64 , qint64 );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&WalletModel::balanceChanged)) {
-                *result = 0;
-                return;
-            }
-        }
-        {
-            typedef void (WalletModel::*_t)(int );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&WalletModel::numTransactionsChanged)) {
-                *result = 1;
-                return;
-            }
-        }
-        {
-            typedef void (WalletModel::*_t)(int );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&WalletModel::encryptionStatusChanged)) {
-                *result = 2;
-                return;
-            }
-        }
-        {
-            typedef void (WalletModel::*_t)();
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&WalletModel::requireUnlock)) {
-                *result = 3;
-                return;
-            }
-        }
-        {
-            typedef void (WalletModel::*_t)(const QString & , const QString & , bool );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&WalletModel::error)) {
-                *result = 4;
-                return;
-            }
-        }
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject WalletModel::staticMetaObject = {
-    { &QObject::staticMetaObject, qt_meta_stringdata_WalletModel.data,
-      qt_meta_data_WalletModel,  qt_static_metacall, nullptr, nullptr}
+const QMetaObjectExtraData WalletModel::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
 };
 
+const QMetaObject WalletModel::staticMetaObject = {
+    { &QObject::staticMetaObject, qt_meta_stringdata_WalletModel,
+      qt_meta_data_WalletModel, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &WalletModel::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
 
 const QMetaObject *WalletModel::metaObject() const
 {
-    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
 }
 
 void *WalletModel::qt_metacast(const char *_clname)
 {
-    if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_WalletModel.stringdata0))
-        return static_cast<void*>(this);
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_WalletModel))
+        return static_cast<void*>(const_cast< WalletModel*>(this));
     return QObject::qt_metacast(_clname);
 }
 
@@ -195,10 +113,6 @@ int WalletModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
         _id -= 9;
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
-            *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 9;
     }
     return _id;
 }
@@ -206,35 +120,34 @@ int WalletModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void WalletModel::balanceChanged(qint64 _t1, qint64 _t2, qint64 _t3, qint64 _t4)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
 void WalletModel::numTransactionsChanged(int _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
 void WalletModel::encryptionStatusChanged(int _t1)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 
 // SIGNAL 3
 void WalletModel::requireUnlock()
 {
-    QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
+    QMetaObject::activate(this, &staticMetaObject, 3, 0);
 }
 
 // SIGNAL 4
 void WalletModel::error(const QString & _t1, const QString & _t2, bool _t3)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)) };
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)) };
     QMetaObject::activate(this, &staticMetaObject, 4, _a);
 }
-QT_WARNING_POP
 QT_END_MOC_NAMESPACE
